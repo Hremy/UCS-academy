@@ -1,0 +1,7 @@
+{
+    "scripts": [
+        "create path (sling:OrderedFolder) /content/dam/academy-ucs-remy",
+        "create path (nt:unstructured) /content/dam/academy-ucs-remy/jcr:content",
+        "set properties on /content/dam/academy-ucs-remy/jcr:content\n  set cq:conf{String} to /conf/academy-ucs-remy\n  set jcr:title{String} to \"Academy UCS Remy\"\nend"
+    ]
+}

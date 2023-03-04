@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/academy-ucs-remy" mode="merge"/>
+    <filter root="/content/academy-ucs-remy" mode="merge"/>
+    <filter root="/content/dam/academy-ucs-remy/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/academy-ucs-remy" mode="merge"/>
+</workspaceFilter>

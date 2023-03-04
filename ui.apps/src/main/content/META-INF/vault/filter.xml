@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/academy-ucs-remy/clientlibs"/>
+    <filter root="/apps/academy-ucs-remy/components"/>
+    <filter root="/apps/academy-ucs-remy/i18n"/>
+    <filter root="/apps/academy-ucs-remy/templates"/>
+
+</workspaceFilter>
