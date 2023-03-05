@@ -1,7 +1,9 @@
-<div class="footer__mainLink">
-    <a href="#" class="footer__link">Contacts</a>
-    <a href="#" class="footer__link">Glossary</a>
-    <a href="#" class="footer__link">System Requirements</a>
-    <a href="#" class="footer__link">Site Map</a>
-    <a href="#" class="footer__link">FAQ</a>
-  </div>
+<div class="footer__mainLink" data-sly-list.multifield="${resource.getChildren}">
+  <sly data-sly-test="${multifield.name == 'menus'}">
+    <sly data-sly-list.item="${multifield.getChildren}">
+      <a href="#" class="footer__link">${item.valueMap.name}</a>
+    </sly>
+  </sly>
+</div>
+
+      

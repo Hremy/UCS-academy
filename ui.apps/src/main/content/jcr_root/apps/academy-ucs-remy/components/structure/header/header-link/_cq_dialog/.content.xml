@@ -16,6 +16,17 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Text"
                         name="./text"/>
+
+                    <fromList
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathbrowser"
+                        fieldDescription="Path of the image."
+                        fieldLabel="Path"
+                        name="./pathImage"
+                        required="{Boolean}true"
+                        rootPath=""/>
+
+                        
                 </items>
             </column>
         </items>
