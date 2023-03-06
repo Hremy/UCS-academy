@@ -1,0 +1,10 @@
+#base=js
+
+site.js
+swiper.min.js
+site.js
+moment.min.js
+daterangepicker.min.js
+common.js
+click-outside.js
+Chart.min.js
