@@ -1,11 +1,19 @@
-<div class="footer__col">
-    <a href="#">
-      <span class="icon-twitter"></span>
-    </a>
-    <a href="#">
-      <span class="icon-linkedin"></span>
-    </a>
-    <a href="#">
-      <span class="icon-youtube"></span>
-    </a>
+
+
+  <div data-sly-test="${!resource['menus/jcr:primaryType']}" class="plcholder-white">
+    connect with us
+  </div>
+  <div class="footer__col">
+    <div class="footer__socials">
+
+  <sly data-sly-list.multifield="${resource.getChildren}">
+    <sly data-sly-test="${multifield.name == 'menus'}">
+      <sly data-sly-list.item="${multifield.getChildren}">
+        <a href="${item.valueMap.link}">
+          <span target="_blank" class="${item.valueMap.selector}"></span>
+        </a>
+      </sly>
+    </sly>
+  </sly>
+  </div>
   </div>
