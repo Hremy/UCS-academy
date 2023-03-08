@@ -35,10 +35,14 @@
             <a class="second-level__item--title text--paragraph-title" href="#">
               ABOUT US
             </a>
-            <a class="second-level__item text--body" href="#">Clients</a>
-            <a class="second-level__item text--body" href="#">Our People</a>
-            <a class="second-level__item text--body" href="#">Commitment</a>
-            <a class="second-level__item text--body" href="#">Time 4 u</a>
+            
+
+            <sly data-sly-list.item="${currentPage.listChildren}">
+              <div data-sly-test="${!item.hideInNav}" href="${item.path}.html">
+                <span class="second-level__item text--body">${item.title}</span>
+                
+              </div>
+            </sly>
           </div>
         </div>
 
