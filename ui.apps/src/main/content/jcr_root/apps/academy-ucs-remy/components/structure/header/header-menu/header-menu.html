@@ -1,18 +1,19 @@
-<div class="navbar__links">
-    <a class="navbar__link contact-us" href="#">
-      <div class="icon icon-contattaci2"></div>
-      <p class="text--label">CONTACT US</p>
-    </a>
-    <a class="navbar__link iconCalendar" href="#">
-      <div class="icon icon-calendar"></div>
-      <p class="text--label">CALENDAR</p>
-    </a>
-    <a class="navbar__link worldwide" href="#">
-      <div class="icon icon-estero2"></div>
-      <p class="text--label">WORLDWIDE</p>
-    </a>
-    <a class="navbar__link search">
-      <div class="icon icon-search"></div>
-      <p class="search__text text--label">SEARCH</p>
-    </a>
-  </div>
+
+
+<div data-sly-test="${!resource['menus/jcr:primaryType']}" class="plcholder-white">
+  ~Header First Menu~
+</div>
+
+
+<div class="navbar__links" data-sly-list.multifield="${resource.getChildren}">
+  <sly data-sly-test="${multifield.name == 'menus'}">
+    <sly data-sly-list.item="${multifield.getChildren}">
+        
+      <a class="navbar__link search" href="${item.valueMap.path}.html" target="${item.valueMap.target}">
+        <div class="${item.valueMap.selector}"></div>
+        <p class="search__text text--label">${item.valueMap.name}</p>
+        
+      </a>
+    </sly>
+  </sly>
+</div>

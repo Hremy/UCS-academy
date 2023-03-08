@@ -5,45 +5,14 @@
         <span>BACK</span>
       </div>
       <div class="first-level__items">
-        <div data-nav-1="about-us" class="first-level__item about-us" href="#">
-          <span class="item__text text--label">About us</span>
-          <span class="icon icon-forth"></span>
-        </div>
 
-        <div data-nav-1="one-unicredit" class="first-level__item one-unicredit" href="#">
-          <span class="item__text text--label">One Unicredit</span>
-          <span class="icon icon-forth"></span>
-        </div>
+        <sly data-sly-list.item="${currentPage.listChildren}">
+          <div data-sly-test="${!item.hideInNav}" data-nav-1="about-us" class="first-level__item about-us" href="${item.path}.html">
+            <span class="item__text text--label">${item.title}</span>
+            <span class="icon icon-forth"></span>
+          </div>
+        </sly>
 
-        <div data-nav-1="business" class="first-level__item business" href="#">
-          <span class="item__text text--label">Business</span>
-          <span class="icon icon-forth"></span>
-        </div>
-
-        <div data-nav-1="governance" class="first-level__item governance" href="#">
-          <span class="item__text text--label">Governance</span>
-          <span class="icon icon-forth"></span>
-        </div>
-
-        <div data-nav-1="investors" class="first-level__item investors" href="#">
-          <span class="item__text text--label">Investors</span>
-          <span class="icon icon-forth"></span>
-        </div>
-
-        <div data-nav-1="sustainability" class="first-level__item sustainability" href="#">
-          <span class="item__text text--label">Sustainability</span>
-          <span class="icon icon-forth"></span>
-        </div>
-
-        <div data-nav-1="press-media" class="first-level__item press-media" href="#">
-          <span class="item__text text--label">Press & Media</span>
-          <span class="icon icon-forth"></span>
-        </div>
-
-        <div data-nav-1="careers" class="first-level__item careers" href="#">
-          <span class="item__text text--label">Careers</span>
-          <span class="icon icon-forth"></span>
-        </div>
       </div>
 
       <div class="navbar__languages">
