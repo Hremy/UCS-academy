@@ -6,11 +6,11 @@
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" 
      data-sly-call="${clientLib.css @ categories='academy-ucs-remy.site'}" data-sly-unwrap/>
 
-<div data-sly-resource="${'header' @ resourceType='academy-ucs-remy/components/structure/header'}"></div>
+<div data-sly-resource="${'/content/academy-ucs-remy/us/en/home-page/jcr:content/header' @ resourceType='academy-ucs-remy/components/structure/header' , wcmmode='disabled'}"></div>
 
 <div data-sly-resource="${'parsys' @ resourceType='wcm/foundation/components/parsys'}"></div>
 
-<div data-sly-resource="${'footer' @ resourceType='academy-ucs-remy/components/structure/footer'}"></div>
+<div data-sly-resource="${'/content/academy-ucs-remy/us/en/home-page/jcr:content/footer' @ resourceType='academy-ucs-remy/components/structure/footer' , wcmmode='disabled'}"></div>
 
 
 <sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" 

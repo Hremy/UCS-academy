@@ -58,7 +58,7 @@
                                             name="./enabler"
                                             value="{Boolean}true"
                                             uncheckedValue="{Boolean}false"
-                                            defaultChecked="{Boolean}true"/>   
+                                            defaultChecked="{Boolean}true"/>    
 
                           </items>
                       </field>

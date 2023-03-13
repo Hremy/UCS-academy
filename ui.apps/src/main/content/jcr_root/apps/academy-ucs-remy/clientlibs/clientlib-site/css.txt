@@ -13,3 +13,6 @@ main__accademy.css
 main__archiveSearch.css
 font_public.css
 last-include.min.css
+heroBanner.css
+heroBanner__welcome.css
+heroBanner__article.css

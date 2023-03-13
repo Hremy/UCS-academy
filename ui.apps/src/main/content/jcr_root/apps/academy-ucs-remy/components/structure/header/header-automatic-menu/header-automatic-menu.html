@@ -1,3 +1,5 @@
+<sly data-sly-use.model="it.codeland.ucs.remy.core.models.OtherPage"></sly>
+
 <div class="navbar__hamburger">
     <div class="navbar__first-level">
       <div class="navbar__back text--label">
@@ -6,8 +8,8 @@
       </div>
       <div class="first-level__items">
 
-        <sly data-sly-list.item="${currentPage.listChildren}">
-          <div data-sly-test="${!item.hideInNav}" data-nav-1="about-us" class="first-level__item about-us" href="${item.path}.html">
+        <sly data-sly-list.item="${model.homePage.listChildren}">
+          <div data-sly-test="${!item.hideInNav}" data-nav-1="${item.name}" class="first-level__item ${item.name}" href="${item.path}.html">
             <span class="item__text text--label">${item.title}</span>
             <span class="icon icon-forth"></span>
           </div>
@@ -30,137 +32,24 @@
         </div>
       </div>
       <div class="navbar__second-level">
-        <div class="second-level__items about-us" data-nav-2="about-us">
-          <div class="container">
-            <a class="second-level__item--title text--paragraph-title" href="#">
-              ABOUT US
-            </a>
-            
 
-            <sly data-sly-list.item="${currentPage.listChildren}">
-              <div data-sly-test="${!item.hideInNav}" href="${item.path}.html">
-                <span class="second-level__item text--body">${item.title}</span>
-                
-              </div>
-            </sly>
-          </div>
-        </div>
 
-        <div class="second-level__items one-unicredit" data-nav-2="one-unicredit">
+      <sly data-sly-list.level1="${model.homePage.listChildren}">
+       
+        <div class="second-level__items ${level1.name}" data-nav-2="${level1.name}">
           <div class="container">
-            <a class="second-level__item--title text--paragraph-title" href="#">
-              ONE UNICREDIT
+            <a class="second-level__item--title text--paragraph-title" href="${level2.path}.html">
+              ${level1.title}
             </a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">one-unicredit</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">governance</a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-          </div>
+          <sly data-sly-list.level2="${level1.listChildren}">
+            <a data-sly-test =${!level2.hideInNav} class="second-level__item text--body" href="${level2.path}.html">${level2.title}</a>
+          </sly>
         </div>
-
-        <div class="second-level__items business" data-nav-2="business">
-          <div class="container">
-            <a class="second-level__item--title text--paragraph-title" href="#">
-              BUSINESS
-            </a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">business</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">Amet</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">Amet</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">business</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-          </div>
-        </div>
-
-        <div class="second-level__items governance" data-nav-2="governance">
-          <div class="container">
-            <a class="second-level__item--title text--paragraph-title" href="#">
-              GOVERANCE
-            </a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">governance</a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">business</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">Amet</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">Amet</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">business</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-          </div>
-        </div>
-
-        <div class="second-level__items investors" data-nav-2="investors">
-          <div class="container">
-            <a class="second-level__item--title text--paragraph-title" href="#">
-              INVESTORS
-            </a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">investors</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">Amet</a>
-          </div>
-        </div>
-
-        <div class="second-level__items sustainability" data-nav-2="sustainability">
-          <div class="container">
-            <a class="second-level__item--title text--paragraph-title" href="#">
-              SUSTAINABILITY
-            </a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">sustainability</a>
-            <a class="second-level__item text--body" href="#">Amet</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">Amet</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">Amet</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-          </div>
-        </div>
-
-        <div class="second-level__items press-media" data-nav-2="press-media">
-          <div class="container">
-            <a class="second-level__item--title text--paragraph-title" href="#">
-              PRESS MEDIA
-            </a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">careers</a>
-          </div>
-        </div>
-
-        <div class="second-level__items careers" data-nav-2="careers">
-          <div class="container">
-            <a class="second-level__item--title text--paragraph-title" href="#">
-              CAREERS
-            </a>
-            <a class="second-level__item text--body" href="#">Lorem</a>
-            <a class="second-level__item text--body" href="#">Ipsum</a>
-            <a class="second-level__item text--body" href="#">careers</a>
-            <a class="second-level__item text--body" href="#">onTest</a>
-            <a class="second-level__item text--body" href="#">Amet</a>
-          </div>
-        </div>
+      </div>
+      </sly>
       </div>
     </div>
   </div>
+
+
+
