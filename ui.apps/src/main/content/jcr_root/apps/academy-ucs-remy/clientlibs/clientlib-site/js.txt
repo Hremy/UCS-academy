@@ -10,3 +10,6 @@ moment.min.js
 swiper.min.js
 site.js
 header.js
+heroBanner.js
+heroBanner__welcome.js
+heroBanner__article.js
