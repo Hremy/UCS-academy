@@ -184,7 +184,7 @@
   margin-bottom: 10px;
 }
 .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .hero__info .hero__lables .hero__lable {
-  height: 20px;
+  height: 26px;
   margin: 0 10px 0 0;
   white-space: nowrap;
 }
@@ -437,6 +437,7 @@
   cursor: pointer;
   font-size: 24px;
   color: #ffffff;
+  margin-top: -7%;
 }
 .heroBanner-welcome .heroBanner__modal .modal {
   height: 600px;
@@ -448,6 +449,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  margin-top: 10%;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .heroBanner-welcome .heroBanner__modal .modal {

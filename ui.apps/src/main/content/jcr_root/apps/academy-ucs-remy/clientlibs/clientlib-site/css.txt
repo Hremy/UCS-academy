@@ -1,18 +1,3 @@
 #base=css
 
-
-general.css
 site.css
-fonts.css
-Chart.min.css
-daterangepicker.css
-fonts.css
-general.css
-main.css
-main__accademy.css
-main__archiveSearch.css
-font_public.css
-last-include.min.css
-heroBanner.css
-heroBanner__welcome.css
-heroBanner__article.css

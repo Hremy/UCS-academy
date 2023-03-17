@@ -5,12 +5,12 @@ $(document).ready(function () {
     if ($(this).attr("data-mask") == "dark") {
       $(this)
         .find(".mask__logo")
-        .attr("src", "./components/heroBanner__welcome/img/newLight.png")
+        .attr("src", "/content/dam/academy-ucs-remy/hero-slider/newLight.png")
         .addClass("mask__logo--white");
     } else {
       $(this)
         .find(".mask__logo")
-        .attr("src", "./components/heroBanner__welcome/img/newDark.png")
+        .attr("src", "/content/dam/academy-ucs-remy/hero-slider/newDark.png")
         .addClass("mask__logo--dark");
     }
   });

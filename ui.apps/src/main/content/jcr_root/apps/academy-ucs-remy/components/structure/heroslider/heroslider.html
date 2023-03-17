@@ -1,162 +1,1769 @@
-<!-- ******************* START HERO BANNER ******************* -->
-<div class="heroBanner-welcome">
-    <div class="heroBanner__main container-fixed">
-      <div class="heroBanner__container swiper-container">
-        <div class="heroBanner__wrapper swiper-wrapper">
-          <!-- TYPE 1 -->
-          <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
-            data-bg="/content/dam/academy-ucs-remy/hero-slider/slide_1_desk.jpg"
-            data-bg-mobile="/content/dam/academy-ucs-remy/hero-slider/slide_1_mobile.jpg"
-          >
-            <div class="hero__mask text--subtitle" data-mask="light">
-              <img
-                class="mask__logo"
-                src=""
-                alt="logo__mask"
-              />
-            </div>
-            <div class="hero container">
-              <div class="hero__title text--headline">
-                <p>Welcome to</p>
-                <p>our magazine ONE UniCredit</p>
-              </div>
-              <p class="hero__subtitle text--body">
-                One UniCredit brings our people, customers and communities
-                together in one place.
-              </p>
-            </div>
-          </div>
-          <!-- TYPE 2 -->
-          <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
-            data-bg="/content/dam/academy-ucs-remy/hero-slider/slide_2_desk.jpg"
-            data-bg-mobile="/content/dam/academy-ucs-remy/hero-slider/slide_2_mobile.jpg"
-          >
-            <div class="hero__mask text--subtitle" data-mask="dark">
-              <img
-                class="mask__logo"
-                src=""
-                alt="logo__mask"
-              />
-            </div>
-            <div class="hero container">
-              <div class="hero__info">
-                <p class="hero__title text--headline">
-                  Reminder to stay safe!
-                </p>
-                <div class="hero__lables">
-                  <span class= "hero__lable text--labelBg bg--lipstick">OUR PEOPLE</span>
-                  <div class="hero__hashtags hashTags">
-                     <div class="hero__hashtag hashTag">
-                      #Digitalization
-                      </div>
-                      <div class="hero__hashtag hashTag">
-                        #SocialImpactBanking
-                      </div>
-                      <div class="hero__hashtag hashTag">
-                        #MakeaDifferenceEveryDay
-                      </div>
-                      <div class="hero__hashtag hashTag">
-                        #BestPlaceToWork
-                      </div>
-                      <div class="more-hashtag">
-                        <span class="oval"></span>
-                        <span class="oval"></span>
-                        <span class="oval"></span>
-                      </div>
-                  </div>
-                </div>
+<sly data-sly-use.modelSlider="it.codeland.ucs.remy.core.models.Slider">
 
-                <p class="hero__date text--subtitle">
-                  Thursday 24 Sep 2020
-                </p>
-                <p class="hero__desc text--body">
-                  With Covid-19 cases rising across our geographies,
-                  UniCredit reminds you about the flexible working solutions
-                </p>
-                <a class="hero__button button button--bg" href="#">
-                  Discover more
-                </a>
+  <div class="heroBanner-welcome">
+      <div class="heroBanner__main container-fixed">
+          <div class="heroBanner__container swiper-container">
+
+              <div class="heroBanner__wrapper swiper-wrapper">
+
+
+
+                  <!-- SLIDER COUNT -->
+                  <sly data-sly-test.isSlider1="${properties.sliderPosition1Slider != 'slider0'}"></sly>
+                  <sly data-sly-test.isSlider11="${isSlider1 ? properties.sliderPosition1Slider == 'slider1' && properties.pictureDesktop1Ref != null || properties.sliderPosition1Slider == 'slider2' && properties.pictureDesktop2Ref != null || properties.sliderPosition1Slider == 'slider3' && properties.pictureDesktop3Ref != null || properties.sliderPosition1Slider == 'slider4' && properties.pictureDesktop4Ref != null || properties.sliderPosition1Slider == 'slider5' && properties.pictureDesktop5Ref != null : false}"></sly>
+                  <sly data-sly-test.isSlider111="${isSlider11 ? '1' : ''}"></sly>
+
+                  <sly data-sly-test.isSlider2="${properties.sliderPosition2Slider != 'slider0'}"></sly>
+                  <sly data-sly-test.isSlider22="${isSlider2 ? properties.sliderPosition2Slider == 'slider1' && properties.pictureDesktop1Ref != null || properties.sliderPosition2Slider == 'slider2' && properties.pictureDesktop2Ref != null || properties.sliderPosition2Slider == 'slider3' && properties.pictureDesktop3Ref != null || properties.sliderPosition2Slider == 'slider4' && properties.pictureDesktop4Ref != null || properties.sliderPosition2Slider == 'slider5' && properties.pictureDesktop5Ref != null : false}"></sly>
+                  <sly data-sly-test.isSlider222="${isSlider22 ? '1' : ''}"></sly>
+
+                  <sly data-sly-test.isSlider3="${properties.sliderPosition3Slider != 'slider0'}"></sly>
+                  <sly data-sly-test.isSlider33="${isSlider3 ? properties.sliderPosition3Slider == 'slider1' && properties.pictureDesktop1Ref != null || properties.sliderPosition3Slider == 'slider2' && properties.pictureDesktop2Ref != null || properties.sliderPosition3Slider == 'slider3' && properties.pictureDesktop3Ref != null || properties.sliderPosition3Slider == 'slider4' && properties.pictureDesktop4Ref != null || properties.sliderPosition3Slider == 'slider5' && properties.pictureDesktop5Ref != null : false}"></sly>
+                  <sly data-sly-test.isSlider333="${isSlider33 ? '1' : ''}"></sly>
+
+                  <sly data-sly-test.isSlider4="${properties.sliderPosition4Slider != 'slider0'}"></sly>
+                  <sly data-sly-test.isSlider44="${isSlider4 ? properties.sliderPosition4Slider == 'slider1' && properties.pictureDesktop1Ref != null || properties.sliderPosition4Slider == 'slider2' && properties.pictureDesktop2Ref != null || properties.sliderPosition4Slider == 'slider3' && properties.pictureDesktop3Ref != null || properties.sliderPosition4Slider == 'slider4' && properties.pictureDesktop4Ref != null || properties.sliderPosition4Slider == 'slider5' && properties.pictureDesktop5Ref != null : false}"></sly>
+                  <sly data-sly-test.isSlider444="${isSlider44 ? '1' : ''}"></sly>
+
+                  <sly data-sly-test.isSlider5="${properties.sliderPosition5Slider != 'slider0'}"></sly>
+                  <sly data-sly-test.isSlider55="${isSlider5 ? properties.sliderPosition5Slider == 'slider1' && properties.pictureDesktop1Ref != null || properties.sliderPosition5Slider == 'slider2' && properties.pictureDesktop2Ref != null || properties.sliderPosition5Slider == 'slider3' && properties.pictureDesktop3Ref != null || properties.sliderPosition5Slider == 'slider4' && properties.pictureDesktop4Ref != null || properties.sliderPosition5Slider == 'slider5' && properties.pictureDesktop5Ref != null : false}"></sly>
+                  <sly data-sly-test.isSlider555="${isSlider55 ? '1' : ''}"></sly>
+
+                  <sly data-sly-test.isSlider="${ '{0}{1}{2}{3}{4}{5}' @ format=[isSlider111, isSlider222, isSlider333, isSlider444, isSlider555]}"></sly>
+                  <sly data-sly-test.countSlider="${isSlider.length}"></sly>
+                  <sly data-sly-test.currentSlider="${countSlider > 0 ? 1 : 0}"></sly>
+
+
+                  <h2 class="text-center" style="width: 100%; height: 100%; min-height: 400px; padding-top: 150px; border: 0px #2583d8 solid" data-sly-test="${countSlider == 0}">Click to Add Slider</h2>
+
+
+                  <!-- POSITION 1 -->
+                  <sly data-sly-test="${properties.sliderPosition1Slider != 'slider0'}">
+                      <sly data-sly-test="${properties.sliderPosition1Slider == 'slider1'}">
+                          <sly data-sly-test="${properties.pictureDesktop1Ref != null}">
+                              <sly data-sly-test="${properties.slider1Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop1Ref}"
+                                       data-bg-mobile="${properties.pictureMobile1Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider1Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider1Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider1Title}</p>
+                                              <p>${properties.slider1Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider1Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider1Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop1Ref}"
+                                       data-bg-mobile="${properties.pictureMobile1Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider1Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider1Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider1Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider1Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider1="${modelSlider.listMapTagSlider1}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider1.slider1Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider1Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider1Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider1Target}" href="${properties.slider1Path}.html">
+                                                  ${properties.slider1Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider1Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop1Ref}"
+                                       data-bg-mobile="${properties.pictureMobile1Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider1Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider1Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider1Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider1Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider1Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay1="${properties.slider1Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider1 button button--bg" href="#">
+                                                  ${properties.slider1ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition1Slider == 'slider2'}">
+                          <sly data-sly-test="${properties.pictureDesktop2Ref != null}">
+                              <sly data-sly-test="${properties.slider2Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop2Ref}"
+                                       data-bg-mobile="${properties.pictureMobile2Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider2Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider2Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider2Title}</p>
+                                              <p>${properties.slider2Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider2Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider2Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop2Ref}"
+                                       data-bg-mobile="${properties.pictureMobile2Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider2Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider2Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider2Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider2Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider2="${modelSlider.listMapTagSlider2}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider2.slider2Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider2Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider2Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider2Target}" href="${properties.slider2Path}.html">
+                                                  ${properties.slider2Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider2Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop2Ref}"
+                                       data-bg-mobile="${properties.pictureMobile2Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider2Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider2Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider2Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider2Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider2Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay2="${properties.slider2Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider2 button button--bg" href="#">
+                                                  ${properties.slider2ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition1Slider == 'slider3'}">
+                          <sly data-sly-test="${properties.pictureDesktop3Ref != null}">
+                              <sly data-sly-test="${properties.slider3Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop3Ref}"
+                                       data-bg-mobile="${properties.pictureMobile3Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider3Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider3Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider3Title}</p>
+                                              <p>${properties.slider3Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider3Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider3Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop3Ref}"
+                                       data-bg-mobile="${properties.pictureMobile3Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider3Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider3Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider3Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider3Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider3="${modelSlider.listMapTagSlider3}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider3.slider3Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider3Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider3Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider3Target}" href="${properties.slider3Path}.html">
+                                                  ${properties.slider3Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider3Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop3Ref}"
+                                       data-bg-mobile="${properties.pictureMobile3Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider3Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider3Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider3Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider3Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider3Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay3="${properties.slider3Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider3 button button--bg" href="#">
+                                                  ${properties.slider3ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition1Slider == 'slider4'}">
+                          <sly data-sly-test="${properties.pictureDesktop4Ref != null}">
+                              <sly data-sly-test="${properties.slider4Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop4Ref}"
+                                       data-bg-mobile="${properties.pictureMobile4Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider4Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider4Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider4Title}</p>
+                                              <p>${properties.slider4Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider4Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider4Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop4Ref}"
+                                       data-bg-mobile="${properties.pictureMobile4Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider4Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider4Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider4Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider4Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider4="${modelSlider.listMapTagSlider4}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider4.slider4Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider4Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider4Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider4Target}" href="${properties.slider4Path}.html">
+                                                  ${properties.slider4Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider4Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop4Ref}"
+                                       data-bg-mobile="${properties.pictureMobile4Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider4Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider4Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider4Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider4Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider4Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay4="${properties.slider4Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider4 button button--bg" href="#">
+                                                  ${properties.slider4ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition1Slider == 'slider5'}">
+                          <sly data-sly-test="${properties.pictureDesktop5Ref != null}">
+                              <sly data-sly-test="${properties.slider5Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop5Ref}"
+                                       data-bg-mobile="${properties.pictureMobile5Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider5Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider5Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider5Title}</p>
+                                              <p>${properties.slider5Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider5Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider5Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop5Ref}"
+                                       data-bg-mobile="${properties.pictureMobile5Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider5Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider5Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider5Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider5Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider5="${modelSlider.listMapTagSlider5}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider5.slider5Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider5Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider5Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider5Target}" href="${properties.slider5Path}.html">
+                                                  ${properties.slider5Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider5Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop5Ref}"
+                                       data-bg-mobile="${properties.pictureMobile5Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider5Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider5Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider5Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider5Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider5Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay5="${properties.slider5Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider5 button button--bg" href="#">
+                                                  ${properties.slider5ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                  </sly>
+
+                  <sly data-sly-include="heroslider-1.html"></sly>
+
+                  <!-- POSITION 4 -->
+                  <sly data-sly-test="${properties.sliderPosition4Slider != 'slider0'}">
+                      <sly data-sly-test="${properties.sliderPosition4Slider == 'slider1'}">
+                          <sly data-sly-test="${properties.pictureDesktop1Ref != null}">
+                              <sly data-sly-test="${properties.slider1Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop1Ref}"
+                                       data-bg-mobile="${properties.pictureMobile1Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider1Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider1Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider1Title}</p>
+                                              <p>${properties.slider1Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider1Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider1Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop1Ref}"
+                                       data-bg-mobile="${properties.pictureMobile1Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider1Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider1Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider1Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider1Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider1="${modelSlider.listMapTagSlider1}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider1.slider1Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider1Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider1Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider1Target}" href="${properties.slider1Path}.html">
+                                                  ${properties.slider1Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition4Slider == 'slider2'}">
+                          <sly data-sly-test="${properties.pictureDesktop2Ref != null}">
+                              <sly data-sly-test="${properties.slider2Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop2Ref}"
+                                       data-bg-mobile="${properties.pictureMobile2Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider2Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider2Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider2Title}</p>
+                                              <p>${properties.slider2Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider2Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider2Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop2Ref}"
+                                       data-bg-mobile="${properties.pictureMobile2Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider2Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider2Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider2Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider2Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider2="${modelSlider.listMapTagSlider2}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider2.slider2Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider2Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider2Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider2Target}" href="${properties.slider2Path}.html">
+                                                  ${properties.slider2Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider2Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop2Ref}"
+                                       data-bg-mobile="${properties.pictureMobile2Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider2Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider2Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider2Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider2Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider2Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay2="${properties.slider2Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider2 button button--bg" href="#">
+                                                  ${properties.slider2ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition4Slider == 'slider3'}">
+                          <sly data-sly-test="${properties.pictureDesktop3Ref != null}">
+                              <sly data-sly-test="${properties.slider3Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop3Ref}"
+                                       data-bg-mobile="${properties.pictureMobile3Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider3Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider3Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider3Title}</p>
+                                              <p>${properties.slider3Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider3Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider3Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop3Ref}"
+                                       data-bg-mobile="${properties.pictureMobile3Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider3Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider3Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider3Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider3Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider3="${modelSlider.listMapTagSlider3}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider3.slider3Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider3Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider3Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider3Target}" href="${properties.slider3Path}.html">
+                                                  ${properties.slider3Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider3Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop3Ref}"
+                                       data-bg-mobile="${properties.pictureMobile3Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider3Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider3Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider3Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider3Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider3Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay3="${properties.slider3Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider3 button button--bg" href="#">
+                                                  ${properties.slider3ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition4Slider == 'slider4'}">
+                          <sly data-sly-test="${properties.pictureDesktop4Ref != null}">
+                              <sly data-sly-test="${properties.slider4Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop4Ref}"
+                                       data-bg-mobile="${properties.pictureMobile4Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider4Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider4Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider4Title}</p>
+                                              <p>${properties.slider4Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider4Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider4Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop4Ref}"
+                                       data-bg-mobile="${properties.pictureMobile4Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider4Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider4Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider4Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider4Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider4="${modelSlider.listMapTagSlider4}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider4.slider4Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider4Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider4Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider4Target}" href="${properties.slider4Path}.html">
+                                                  ${properties.slider4Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider4Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop4Ref}"
+                                       data-bg-mobile="${properties.pictureMobile4Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider4Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider4Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider4Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider4Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider4Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay4="${properties.slider4Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider4 button button--bg" href="#">
+                                                  ${properties.slider4ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition4Slider == 'slider5'}">
+                          <sly data-sly-test="${properties.pictureDesktop5Ref != null}">
+                              <sly data-sly-test="${properties.slider5Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop5Ref}"
+                                       data-bg-mobile="${properties.pictureMobile5Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider5Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider5Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider5Title}</p>
+                                              <p>${properties.slider5Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider5Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider5Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop5Ref}"
+                                       data-bg-mobile="${properties.pictureMobile5Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider5Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider5Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider5Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider5Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider5="${modelSlider.listMapTagSlider5}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider5.slider5Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider5Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider5Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider5Target}" href="${properties.slider5Path}.html">
+                                                  ${properties.slider5Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider5Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop5Ref}"
+                                       data-bg-mobile="${properties.pictureMobile5Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider5Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider5Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider5Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider5Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider5Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay5="${properties.slider5Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider5 button button--bg" href="#">
+                                                  ${properties.slider5ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                  </sly>
+
+                  <!-- POSITION 5 -->
+                  <sly data-sly-test="${properties.sliderPosition5Slider != 'slider0'}">
+                      <sly data-sly-test="${properties.sliderPosition5Slider == 'slider1'}">
+                          <sly data-sly-test="${properties.pictureDesktop1Ref != null}">
+                              <sly data-sly-test="${properties.slider1Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop1Ref}"
+                                       data-bg-mobile="${properties.pictureMobile1Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider1Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider1Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider1Title}</p>
+                                              <p>${properties.slider1Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider1Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider1Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop1Ref}"
+                                       data-bg-mobile="${properties.pictureMobile1Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider1Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider1Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider1Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider1Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider1="${modelSlider.listMapTagSlider1}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider1.slider1Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider1Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider1Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider1Target}" href="${properties.slider1Path}.html">
+                                                  ${properties.slider1Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider1Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop1Ref}"
+                                       data-bg-mobile="${properties.pictureMobile1Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider1Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider1Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider1Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider1Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider1Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay1="${properties.slider1Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider1 button button--bg" href="#">
+                                                  ${properties.slider1ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition5Slider == 'slider2'}">
+                          <sly data-sly-test="${properties.pictureDesktop2Ref != null}">
+                              <sly data-sly-test="${properties.slider2Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop2Ref}"
+                                       data-bg-mobile="${properties.pictureMobile2Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider2Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider2Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider2Title}</p>
+                                              <p>${properties.slider2Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider2Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider2Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop2Ref}"
+                                       data-bg-mobile="${properties.pictureMobile2Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider2Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider2Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider2Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider2Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider2="${modelSlider.listMapTagSlider2}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider2.slider2Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider2Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider2Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider2Target}" href="${properties.slider2Path}.html">
+                                                  ${properties.slider2Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider2Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop2Ref}"
+                                       data-bg-mobile="${properties.pictureMobile2Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider2Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider2Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider2Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider2Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider2Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay2="${properties.slider2Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider2 button button--bg" href="#">
+                                                  ${properties.slider2ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition5Slider == 'slider3'}">
+                          <sly data-sly-test="${properties.pictureDesktop3Ref != null}">
+                              <sly data-sly-test="${properties.slider3Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop3Ref}"
+                                       data-bg-mobile="${properties.pictureMobile3Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider3Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider3Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider3Title}</p>
+                                              <p>${properties.slider3Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider3Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider3Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop3Ref}"
+                                       data-bg-mobile="${properties.pictureMobile3Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider3Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider3Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider3Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider3Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider3="${modelSlider.listMapTagSlider3}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider3.slider3Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider3Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider3Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider3Target}" href="${properties.slider3Path}.html">
+                                                  ${properties.slider3Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider3Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop3Ref}"
+                                       data-bg-mobile="${properties.pictureMobile3Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider3Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider3Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider3Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider3Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider3Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay3="${properties.slider3Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider3 button button--bg" href="#">
+                                                  ${properties.slider3ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition5Slider == 'slider4'}">
+                          <sly data-sly-test="${properties.pictureDesktop4Ref != null}">
+                              <sly data-sly-test="${properties.slider4Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop4Ref}"
+                                       data-bg-mobile="${properties.pictureMobile4Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider4Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider4Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider4Title}</p>
+                                              <p>${properties.slider4Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider4Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider4Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop4Ref}"
+                                       data-bg-mobile="${properties.pictureMobile4Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider4Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider4Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider4Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider4Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider4="${modelSlider.listMapTagSlider4}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider4.slider4Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider4Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider4Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider4Target}" href="${properties.slider4Path}.html">
+                                                  ${properties.slider4Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider4Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop4Ref}"
+                                       data-bg-mobile="${properties.pictureMobile4Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider4Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider4Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider4Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider4Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider4Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay4="${properties.slider4Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider4 button button--bg" href="#">
+                                                  ${properties.slider4ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                      <sly data-sly-test="${properties.sliderPosition5Slider == 'slider5'}">
+                          <sly data-sly-test="${properties.pictureDesktop5Ref != null}">
+                              <sly data-sly-test="${properties.slider5Type == 'welcome'}">
+                                  <!-- TYPE 1 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type1 heroBanner__slide--video gradient gradient--type-one swiper-slide"
+                                       data-bg="${properties.pictureDesktop5Ref}"
+                                       data-bg-mobile="${properties.pictureMobile5Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider5Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider5Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__title text--headline">
+                                              <p>${properties.slider5Title}</p>
+                                              <p>${properties.slider5Subtitle}</p>
+                                          </div>
+                                          <p class="hero__subtitle text--body">
+                                              ${properties.slider5Description @context='html'}
+                                          </p>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider5Type == 'article'}">
+                                  <!-- TYPE 2 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type2 gradient gradient--type-two swiper-slide"
+                                       data-bg="${properties.pictureDesktop5Ref}"
+                                       data-bg-mobile="${properties.pictureMobile5Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider5Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider5Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">
+                                                  ${properties.slider5Title}
+                                              </p>
+                                              <div class="hero__lables">
+                                                  <span class= "hero__lable text--labelBg bg--lipstick"> ${properties.slider5Category}</span>
+                                                  <div class="hero__hashtags hashTags">
+
+                                                      <sly data-sly-list.tagItemSlider5="${modelSlider.listMapTagSlider5}">
+                                                          <div class="hero__hashtag hashTag">
+                                                              #${tagItemSlider5.slider5Tag}
+                                                          </div>
+                                                      </sly>
+
+                                                      <div class="more-hashtag">
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                          <span class="oval"></span>
+                                                      </div>
+                                                  </div>
+                                              </div>
+
+                                              <p class="hero__date text--subtitle">
+                                                  ${ 'EEEE d MMM YYYY' @ format=properties.slider5Date, type='date'}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider5Description @context='html'}
+                                              </p>
+                                              <a class="hero__button button button--bg" target="${properties.slider5Target}" href="${properties.slider5Path}.html">
+                                                  ${properties.slider5Button}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                              <sly data-sly-test="${properties.slider5Type == 'getinvolved'}">
+                                  <!-- TYPE 3 -->
+                                  <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
+                                       data-bg="${properties.pictureDesktop5Ref}"
+                                       data-bg-mobile="${properties.pictureMobile5Ref}"
+                                  >
+                                      <div class="hero__mask text--subtitle" data-mask="${properties.slider5Logo == 'white' ? 'dark' : 'light'}">
+                                          <img
+                                                  class="mask__logo"
+                                                  src="${properties.slider5Logo == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}"
+                                                  alt="logo__mask"
+                                          />
+                                      </div>
+                                      <div class="hero container">
+                                          <div class="hero__info">
+                                              <p class="hero__title text--headline">${properties.slider5Title}</p>
+                                              <p class="hero__subtitle text--paragraph-title">
+                                                  ${properties.slider5Subtitle}
+                                              </p>
+                                              <p class="hero__desc text--body">
+                                                  ${properties.slider5Description @context='html'}
+                                              </p>
+                                              <sly data-sly-test.sliderOverlay5="${properties.slider5Type == 'getinvolved'}"></sly>
+                                              <a class="hero__button hero__button-slider5 button button--bg" href="#">
+                                                  ${properties.slider5ButtonG}
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </sly>
+                          </sly>
+                      </sly>
+                  </sly>
+
               </div>
-            </div>
-          </div>
-          <!-- TYPE 3 -->
-          <div class="heroBanner__slide heroBanner__slide--type3 gradient gradient--type-three swiper-slide"
-            data-bg="/content/dam/academy-ucs-remy/hero-slider/slide_3_desk.jpg"
-            data-bg-mobile="/content/dam/academy-ucs-remy/hero-slider/slide_3_mobile.jpg"
-          >
-            <div class="hero__mask text--subtitle" data-mask="dark">
-              <img
-                class="mask__logo"
-                src=""
-                alt="logo__mask"
-              />
-            </div>
-            <div class="hero container">
-              <div class="hero__info">
-                <p class="hero__title text--headline">Get involved</p>
-                <p class="hero__subtitle text--paragraph-title">
-                  AUTUMN PHOTO CAMPAIGN
-                </p>
-                <p class="hero__desc text--body">
-                  Our new photography campaign celebrates autumn, the season
-                  that marks the transition from summer to winter.
-                </p>
-                <a class="hero__button button button--bg" href="#">
-                  Discover more
-                </a>
+
+              <div data-pagination data-hero-pagination class="heroBanner__pagination"></div>
+              <div data-arrows class="heroBanner__arrows">
+                  <div data-prev-small class="icon-down"></div>
+                  <div data-number>
+                      <span class="current">${currentSlider}</span> / <span class="total">${countSlider}</span>
+                  </div>
+                  <div data-next-small class="icon-down"></div>
               </div>
-            </div>
+
           </div>
-        </div>
-        <div data-pagination data-hero-pagination class="heroBanner__pagination"></div>
-        <div data-arrows class="heroBanner__arrows">
-          <div data-prev-small class="icon-down"></div>
-          <div data-number>
-            <span class="current">1</span> / <span class="total">3</span>
-          </div>
-          <div data-next-small class="icon-down"></div>
-        </div>
+
+          <!-- MODAL SLIDER 1-->
+          <sly data-sly-test="${true || sliderOverlay1 == true}">
+              <div class="heroBanner__modal heroBanner__modal-slider1">
+                  <div class="modal">
+                      <div class="modal__info">
+                          <div class="modal__involved text--paragraph-title">
+                              <div class="icon icon-info"></div>
+                              ${properties.slider1TitleOverlay}
+                          </div>
+                          <p class="modal__title text--headline">${properties.slider1SubtitleOverlay}</p>
+                          <div class="modal__text text--body">
+                              ${properties.slider1DescriptionOverlay @context='html'}
+                          </div>
+                      </div>
+                      <div class="modal__bg"
+                           data-bg="${properties.pictureDesktop1OverlayRef}"
+                           data-bg-mobile="${properties.pictureMobile1OverlayRef}"></div>
+                  </div>
+                  <div class="modal__top-bar container">
+                      <img src="${properties.logo1OverlayRef == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}" alt="logo" />
+                      <div class="icon icon-close modal__close slider1"></div>
+                  </div>
+              </div>
+          </sly>
+
+          <!-- MODAL SLIDER 2-->
+          <sly data-sly-test="${true || sliderOverlay2 == true}">
+              <div class="heroBanner__modal heroBanner__modal-slider2">
+                  <div class="modal">
+                      <div class="modal__info">
+                          <div class="modal__involved text--paragraph-title">
+                              <div class="icon icon-info"></div>
+                              ${properties.slider2TitleOverlay}
+                          </div>
+                          <p class="modal__title text--headline">${properties.slider2SubtitleOverlay}</p>
+                          <div class="modal__text text--body">
+                              ${properties.slider2DescriptionOverlay @context='html'}
+                          </div>
+                      </div>
+                      <div class="modal__bg"
+                           data-bg="${properties.pictureDesktop2OverlayRef}"
+                           data-bg-mobile="${properties.pictureMobile2OverlayRef}"></div>
+                  </div>
+                  <div class="modal__top-bar container">
+                      <img src="${properties.logo2OverlayRef == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}" alt="logo" />
+                      <div class="icon icon-close modal__close slider2"></div>
+                  </div>
+              </div>
+          </sly>
+
+          <!-- MODAL SLIDER 3-->
+          <sly data-sly-test="${true || sliderOverlay3 == true}">
+              <div class="heroBanner__modal heroBanner__modal-slider3">
+                  <div class="modal">
+                      <div class="modal__info">
+                          <div class="modal__involved text--paragraph-title">
+                              <div class="icon icon-info"></div>
+                              ${properties.slider3TitleOverlay}
+                          </div>
+                          <p class="modal__title text--headline">${properties.slider3SubtitleOverlay}</p>
+                          <div class="modal__text text--body">
+                              ${properties.slider3DescriptionOverlay @context='html'}
+                          </div>
+                      </div>
+                      <div class="modal__bg"
+                           data-bg="${properties.pictureDesktop3OverlayRef}"
+                           data-bg-mobile="${properties.pictureMobile3OverlayRef}"></div>
+                  </div>
+                  <div class="modal__top-bar container">
+                      <img src="${properties.logo3OverlayRef == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}" alt="logo" />
+                      <div class="icon icon-close modal__close slider3"></div>
+                  </div>
+              </div>
+          </sly>
+
+          <!-- MODAL SLIDER 4-->
+          <sly data-sly-test="${true || sliderOverlay4 == true}">
+              <div class="heroBanner__modal heroBanner__modal-slider4">
+                  <div class="modal">
+                      <div class="modal__info">
+                          <div class="modal__involved text--paragraph-title">
+                              <div class="icon icon-info"></div>
+                              ${properties.slider4TitleOverlay}
+                          </div>
+                          <p class="modal__title text--headline">${properties.slider4SubtitleOverlay}</p>
+                          <div class="modal__text text--body">
+                              ${properties.slider4DescriptionOverlay @context='html'}
+                          </div>
+                      </div>
+                      <div class="modal__bg"
+                           data-bg="${properties.pictureDesktop4OverlayRef}"
+                           data-bg-mobile="${properties.pictureMobile4OverlayRef}"></div>
+                  </div>
+                  <div class="modal__top-bar container">
+                      <img src="${properties.logo4OverlayRef == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}" alt="logo" />
+                      <div class="icon icon-close modal__close slider4"></div>
+                  </div>
+              </div>
+          </sly>
+
+          <!-- MODAL SLIDER 5-->
+          <sly data-sly-test="${true || sliderOverlay5 == true}">
+              <div class="heroBanner__modal heroBanner__modal-slider5">
+                  <div class="modal">
+                      <div class="modal__info">
+                          <div class="modal__involved text--paragraph-title">
+                              <div class="icon icon-info"></div>
+                              ${properties.slider5TitleOverlay}
+                          </div>
+                          <p class="modal__title text--headline">${properties.slider5SubtitleOverlay}</p>
+                          <div class="modal__text text--body">
+                              ${properties.slider5DescriptionOverlay @context='html'}
+                          </div>
+                      </div>
+                      <div class="modal__bg"
+                           data-bg="${properties.pictureDesktop5OverlayRef}"
+                           data-bg-mobile="${properties.pictureMobile5OverlayRef}"></div>
+                  </div>
+                  <div class="modal__top-bar container">
+                      <img src="${properties.logo5OverlayRef == 'white' ? '/content/dam/academy-ucs-remy/hero-slider/Logo_white.svg' : '/content/dam/academy-ucs-remy/hero-slider/Logo_dark.svg'}" alt="logo" />
+                      <div class="icon icon-close modal__close slider5"></div>
+                  </div>
+              </div>
+          </sly>
+
       </div>
-      <div class="heroBanner__modal">
-        <div class="modal">
-          <div class="modal__info">
-            <div class="modal__involved text--paragraph-title">
-              <div class="icon icon-info"></div>
-              Get involved
-            </div>
-            <p class="modal__title text--headline">Autumn photo campaign</p>
-            <div class="modal__text text--body">
-              <p>
-                Our new photography campaign celebrates autumn, the season
-                that marks the transition from summer to winter.
-              </p>
-              <p>
-                Please send us your photos that capture your experience of
-                Autumn. This could be images of the season’s warm colours or
-                the unique traditions and special activities that represent
-                the time of year in your city, country and culture.
-              </p>
-              <p>
-                Please remember: if you are sending us a photograph of a
-                person, please ask them to complete our UniCredit Release
-                Form. You can download a copy from this
-                <a href="#">link</a>.
-              </p>
-              <p>We look forward to receiving your photos!</p>
-              <p>
-                Please send your photo and caption to
-                <a href="mailto:onebank@unicreditgroup.eu">onebank@unicreditgroup.eu</a>
-              </p>
-            </div>
-          </div>
-          <div class="modal__bg" data-bg=".//content/dam/academy-ucs-remy/hero-slider/hero_modal_desk.jpg"
-            data-bg-mobile=".//content/dam/academy-ucs-remy/hero-slider/hero_modal_desk.jpg"></div>
-        </div>
-        <div class="modal__top-bar container">
-          <img src=".//content/dam/academy-ucs-remy/hero-slider/logo_unicredit.svg" alt="logo" />
-          <div class="icon icon-close modal__close"></div>
-        </div>
-      </div>
-    </div>
   </div>
-  <!-- ******************* END HERO BANNER ******************* -->
+</sly>

@@ -4,5 +4,4 @@
     <filter root="/apps/academy-ucs-remy/components"/>
     <filter root="/apps/academy-ucs-remy/i18n"/>
     <filter root="/apps/academy-ucs-remy/templates"/>
-
 </workspaceFilter>

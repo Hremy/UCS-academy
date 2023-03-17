@@ -1,23 +1,1958 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    jcr:title="Hero Slider"
-    sling:resourceType="cq/gui/components/authoring/dialog">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Hero Slider Component"
+          sling:resourceType="cq/gui/components/authoring/dialog">
     <content
-        jcr:primaryType="nt:unstructured"
-        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
-        <items jcr:primaryType="nt:unstructured">
-            <column
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/container">
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/tabs">
+        <items
+                jcr:primaryType="nt:unstructured">
+            <tools
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="Settings"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                    name="./slider">
                 <items jcr:primaryType="nt:unstructured">
-                    <text
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Text"
-                        name="./text"/>
+                    <sliderPosition1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sliderSelect
+                                    granite:class="presets"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="1ST PLACE"
+                                    name="./sliderPosition1Slider">
+                                <items jcr:primaryType="nt:unstructured">
+                                    
+                                    <slider1
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 1"
+                                            value="slider1"/>
+                                    <slider2
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 2"
+                                            value="slider2"/>
+                                    <slider3
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 3"
+                                            value="slider3"/>
+                                    <slider4
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 4"
+                                            value="slider4"/>
+                                    <slider5
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 5"
+                                            value="slider5"/>
+                                </items>
+                            </sliderSelect>
+                        </items>
+                    </sliderPosition1>
+                    <sliderPosition2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sliderSelect
+                                    granite:class="presets"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="2ND PLACE"
+                                    name="./sliderPosition2Slider">
+                                <items jcr:primaryType="nt:unstructured">
+                                    
+                                    <slider1
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 1"
+                                            value="slider1"/>
+                                    <slider2
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 2"
+                                            value="slider2"/>
+                                    <slider3
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 3"
+                                            value="slider3"/>
+                                    <slider4
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 4"
+                                            value="slider4"/>
+                                    <slider5
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 5"
+                                            value="slider5"/>
+                                </items>
+                            </sliderSelect>
+                        </items>
+                    </sliderPosition2>
+                    <sliderPosition3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sliderSelect
+                                    granite:class="presets"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="3RD PLACE"
+                                    name="./sliderPosition3Slider">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <slider1
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 1"
+                                            value="slider1"/>
+                                    <slider2
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 2"
+                                            value="slider2"/>
+                                    <slider3
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 3"
+                                            value="slider3"/>
+                                    <slider4
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 4"
+                                            value="slider4"/>
+                                    <slider5
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 5"
+                                            value="slider5"/>
+                                </items>
+                            </sliderSelect>
+                        </items>
+                    </sliderPosition3>
+                    <sliderPosition4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sliderSelect
+                                    granite:class="presets"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="4TH PLACE"
+                                    name="./sliderPosition4Slider">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <slider1
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 1"
+                                            value="slider1"/>
+                                    <slider2
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 2"
+                                            value="slider2"/>
+                                    <slider3
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 3"
+                                            value="slider3"/>
+                                    <slider4
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 4"
+                                            value="slider4"/>
+                                    <slider5
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 5"
+                                            value="slider5"/>
+                                </items>
+                            </sliderSelect>
+                        </items>
+                    </sliderPosition4>
+                    <sliderPosition5
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sliderSelect
+                                    granite:class="presets"
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                    fieldLabel="5TH PLACE"
+                                    name="./sliderPosition5Slider">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <slider1
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 1"
+                                            value="slider1"/>
+                                    <slider2
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 2"
+                                            value="slider2"/>
+                                    <slider3
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 3"
+                                            value="slider3"/>
+                                    <slider4
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 4"
+                                            value="slider4"/>
+                                    <slider5
+                                            jcr:primaryType="nt:unstructured"
+                                            text="SLIDER 5"
+                                            value="slider5"/>
+                                </items>
+                            </sliderSelect>
+                            
+                            
+                            
+                        </items>
+                    </sliderPosition5>
                 </items>
-            </column>
+            </tools>
+            <col1
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="SLIDER 1"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    emptyText="Slider 1"
+                                    name="./linksMapSlider1">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <sliderType granite:class="cq-dialog-dropdown-showhide"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Type"
+                                            emptyText="Select Type"
+                                            name="./slider1Type">
+                                        <granite:data cq-dialog-dropdown-showhide-target=".slider-1-field" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <welcome
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Welcome"
+                                                    value="welcome"/>
+                                            <article
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Article"
+                                                    value="article"/>
+                                            <getinvolved
+                                                    jcr:primaryType="nt:unstructured"
+                                                    text="Get Involved"
+                                                    value="getinvolved"/>
+                                        </items>
+                                    </sliderType>
+                                    <title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Title"
+                                            emptyText="Enter Title"
+                                            name="./slider1Title"/>
+                                    <subtitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Headline"
+                                            emptyText="Enter Headline"
+                                            name="./slider1Subtitle"/>
+                                    <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Abstract"
+                                            emptyText="Enter Abstract"
+                                            name="./slider1Description"/>
+                                    <container1 granite:class="hide slider-1-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="welcome" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+
+                                        </items>
+                                    </container1>
+                                    <container2 granite:class="hide slider-1-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="article" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <date
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                    displayedFormat="dd MMMM DD YYYY"
+                                                    type="datetime"
+                                                    typeHint="Date"
+                                                    fieldLabel="Date"
+                                                    emptyText="Enter Date"
+                                                    name="./slider1Date"/>
+                                            <category
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Category"
+                                                    emptyText="Enter Category"
+                                                    class="hide slider-1-field"
+                                                    showhidetargetvalue="welcome"
+                                                    name="./slider1Category"/>
+                                            <well-multifield
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/well"
+                                                    fieldLabel="Tags"
+                                                    class="hide slider-1-field"
+                                                    showhidetargetvalue="welcome">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <sliderTags1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                            composite="{Boolean}true"
+                                                            fieldDescription="Tags"
+                                                            fieldLabel="Tags"
+                                                            required="{Boolean}false"
+                                                            name="slider1Tags" >
+                                                        <field
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                emptyText="Slider Tas"
+                                                                name="./slider1Tags">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <tags
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                                        fieldLabel="Tag"
+                                                                        emptyText="Select Tag"
+                                                                        name="./slider1Tag"/>
+                                                            </items>
+                                                        </field>
+                                                    </sliderTags1>
+                                                </items>
+                                            </well-multifield>
+                                            <button
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button"
+                                                    emptyText="Enter Button Text"
+                                                    class="hide slider-1-field"
+                                                    showhidetargetvalue="welcome"
+                                                    name="./slider1Button"/>
+                                            <path
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Link"
+                                                    rootPath="/content/academy-ucs-remy/us/en"
+                                                    suffix=".html"
+                                                    class="hide slider-1-field"
+                                                    showhidetargetvalue="welcome"
+                                                    name="./slider1Path"/>
+                                            <target
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Target"
+                                                    emptyText="Target Type"
+                                                    class="hide slider-1-field"
+                                                    showhidetargetvalue="welcome"
+                                                    name="./slider1Target">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <blank jcr:primaryType="nt:unstructured" text="New Tab" value="_blank"/>
+                                                    <self jcr:primaryType="nt:unstructured" text="This Tab" value="_self"/>
+                                                </items>
+                                            </target>
+                                        </items>
+                                    </container2>
+                                    <container3 granite:class="hide slider-1-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="getinvolved" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <button
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button"
+                                                    emptyText="Enter Button Text"
+                                                    class="hide slider-1-field"
+                                                    showhidetargetvalue="welcome"
+                                                    name="./slider1ButtonG"/>
+                                            <titleOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Overlay Title"
+                                                    emptyText="Enter Overlay Title"
+                                                    class="hide slider-1-field"
+                                                    showhidetargetvalue="welcome"
+                                                    name="./slider1TitleOverlay"/>
+                                            <subtitleOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Overlay Headline"
+                                                    emptyText="Enter Overlay Headline"
+                                                    class="hide slider-1-field"
+                                                    showhidetargetvalue="welcome"
+                                                    name="./slider1SubtitleOverlay"/>
+                                            <descriptionOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Overlay Abstract"
+                                                    emptyText="Enter Overlay Abstract"
+                                                    useFixedInlineToolbar="{Boolean}true"
+                                                    key="description"
+                                                    class="hide slider-1-field"
+                                                    showhidetargetvalue="welcome"
+                                                    name="./slider1DescriptionOverlay">
+                                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                                    <format
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <links
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <findreplace
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <subsuperscript
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <spellcheck
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <misctools
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                                            <chars jcr:primaryType="nt:unstructured">
+                                                                <copyright
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#169;"/>
+                                                                <trademark
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8482;"/>
+                                                                <registered
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#174;"/>
+                                                                <emDash
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8212;"/>
+                                                                <pound
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#163;"/>
+                                                                <nbsp
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#160;"/>
+                                                            </chars>
+                                                        </specialCharsConfig>
+                                                    </misctools>
+                                                    <styles
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <styles jcr:primaryType="nt:unstructured">
+                                                            <plainSpan
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="defaultSpan"
+                                                                    text="Default (add span tag)"/>
+                                                            <lead
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="lead"
+                                                                    text="Lead"/>
+                                                        </styles>
+                                                    </styles>
+                                                    <table
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                </rtePlugins>
+                                                <uiSettings jcr:primaryType="nt:unstructured">
+                                                    <cui jcr:primaryType="nt:unstructured">
+                                                        <inline
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,subsuperscript#subscript,subsuperscript#superscript,links#modifylink,links#unlink,links#anchor,#image,findreplace#find,findreplace#replace,spellcheck#checktext,misctools#specialchars,misctools#sourceedit,#styles,#paraformat,table#table]">
+                                                            <popovers jcr:primaryType="nt:unstructured">
+                                                                <justify
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                                        ref="justify"/>
+                                                                <lists
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                        ref="lists"/>
+                                                                <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                <styles
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="styles:getStyles:styles-pulldown"
+                                                                        ref="styles"/>
+                                                            </popovers>
+                                                        </inline>
+                                                    </cui>
+                                                </uiSettings>
+                                            </descriptionOverlay>
+                                            <logoOverlayUpload
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Logo Overlay"
+                                                    emptyText="Select Logo Overlay"
+                                                    class="hide slider-1-field welcome"
+                                                    showhidetargetvalue="welcome"
+                                                    name="./logo1OverlayRef">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <welcome jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                                    <article jcr:primaryType="nt:unstructured" text="Dark" value="dark"/>
+                                                </items>
+                                            </logoOverlayUpload>
+                                            <pictureDesktopOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Overlay Picture Desktop"
+                                                    fileNameParameter="./pictureDesktop1Overlay"
+                                                    fileReferenceParameter="./pictureDesktop1OverlayRef"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./slider1PictureDesktopOverlay"
+                                                    title="Overlay Picture Desktop"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                            <pictureMobileOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Overlay Picture Mobile"
+                                                    fileNameParameter="./pictureMobile1Overlay"
+                                                    fileReferenceParameter="./pictureMobile1OverlayRef"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./slider1PictureMobileOverlay"
+                                                    title="Picture Mobile"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                        </items>
+                                    </container3>
+                                    <logoUpload
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Logo Color"
+                                            emptyText="Select Logo Color"
+                                            name="./slider1Logo">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <welcome jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                            <article jcr:primaryType="nt:unstructured" text="Dark" value="dark"/>
+                                        </items>
+                                    </logoUpload>
+                                    <pictureDesktop
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Picture Desktop"
+                                            fileNameParameter="./pictureDesktop1"
+                                            fileReferenceParameter="./pictureDesktop1Ref"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./slider1PictureDesktop"
+                                            title="Picture Desktop"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                    <pictureMobile
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Picture Mobile"
+                                            fileNameParameter="./pictureMobile1"
+                                            fileReferenceParameter="./pictureMobile1Ref"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./slider1PictureMobile"
+                                            title="Picture Mobile"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                </items>
+                            </field>
+                        </items>
+                    </column>
+                </items>
+            </col1>
+            <col2
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="SLIDER 2"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    emptyText="Slider 2"
+                                    name="./linksMapSlider2">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <sliderType granite:class="cq-dialog-dropdown-showhide"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Type"
+                                            emptyText="Select Type"
+                                            name="./slider2Type">
+                                        <granite:data cq-dialog-dropdown-showhide-target=".slider-2-field" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <welcome jcr:primaryType="nt:unstructured" text="Welcome" value="welcome"/>
+                                            <article jcr:primaryType="nt:unstructured" text="Article" value="article"/>
+                                            <getinvolved jcr:primaryType="nt:unstructured" text="Get Involved" value="getinvolved"/>
+                                        </items>
+                                    </sliderType>
+                                    <title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Title"
+                                            emptyText="Enter Title"
+                                            name="./slider2Title"/>
+                                    <subtitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Headline"
+                                            emptyText="Enter Headline"
+                                            name="./slider2Subtitle"/>
+                                    <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Abstract"
+                                            emptyText="Enter Abstract"
+                                            name="./slider2Description"/>
+                                    <container1 granite:class="hide slider-2-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="welcome" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+
+                                        </items>
+                                    </container1>
+                                    <container2 granite:class="hide slider-2-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="article" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <date
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                    displayedFormat="dd MMMM DD YYYY"
+                                                    type="datetime"
+                                                    typeHint="Date"
+                                                    fieldLabel="Date"
+                                                    emptyText="Enter Date"
+                                                    name="./slider2Date"/>
+                                            <category
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Category"
+                                                    emptyText="Enter Category"
+                                                    name="./slider2Category"/>
+                                            <well-multifield
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/well"
+                                                    fieldLabel="Tags"
+                                                    class="hide slider-2-field"
+                                                    showhidetargetvalue="welcome">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <sliderTags2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                            composite="{Boolean}true"
+                                                            fieldDescription="Tags"
+                                                            fieldLabel="Tags"
+                                                            required="{Boolean}false"
+                                                            name="slider2Tags" >
+                                                        <field
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                emptyText="Slider Tas"
+                                                                name="./slider2Tags">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <tags
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                                        fieldLabel="Tag"
+                                                                        emptyText="Select Tag"
+                                                                        name="./slider2Tag"/>
+                                                            </items>
+                                                        </field>
+                                                    </sliderTags2>
+                                                </items>
+                                            </well-multifield>
+                                            <button
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button"
+                                                    emptyText="Enter Button Text"
+                                                    name="./slider2Button"/>
+                                            <path
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Link"
+                                                    rootPath="/content/academy-ucs-remy/us/en"
+                                                    suffix=".html"
+                                                    name="./slider2Path"/>
+                                            <target
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Target"
+                                                    emptyText="Target Type"
+                                                    name="./slider2Target">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <blank jcr:primaryType="nt:unstructured" text="New Tab" value="_blank"/>
+                                                    <self jcr:primaryType="nt:unstructured" text="This Tab" value="_self"/>
+                                                </items>
+                                            </target>
+                                        </items>
+                                    </container2>
+                                    <container3 granite:class="hide slider-2-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="getinvolved" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <button
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button"
+                                                    emptyText="Enter Button Text"
+                                                    name="./slider2ButtonG"/>
+                                            <titleOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Overlay Title"
+                                                    emptyText="Enter Overlay Title"
+                                                    name="./slider2TitleOverlay"/>
+                                            <subtitleOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Overlay Headline"
+                                                    emptyText="Enter Overlay Headline"
+                                                    name="./slider2SubtitleOverlay"/>
+                                            <descriptionOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Overlay Abstract"
+                                                    emptyText="Enter Overlay Abstract"
+                                                    useFixedInlineToolbar="{Boolean}true"
+                                                    key="description"
+                                                    name="./slider2DescriptionOverlay">
+                                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                                    <format
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <links
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <findreplace
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <subsuperscript
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <spellcheck
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <misctools
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                                            <chars jcr:primaryType="nt:unstructured">
+                                                                <copyright
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#169;"/>
+                                                                <trademark
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8482;"/>
+                                                                <registered
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#174;"/>
+                                                                <emDash
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8212;"/>
+                                                                <pound
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#163;"/>
+                                                                <nbsp
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#160;"/>
+                                                            </chars>
+                                                        </specialCharsConfig>
+                                                    </misctools>
+                                                    <styles
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <styles jcr:primaryType="nt:unstructured">
+                                                            <plainSpan
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="defaultSpan"
+                                                                    text="Default (add span tag)"/>
+                                                            <lead
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="lead"
+                                                                    text="Lead"/>
+                                                        </styles>
+                                                    </styles>
+                                                    <table
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                </rtePlugins>
+                                                <uiSettings jcr:primaryType="nt:unstructured">
+                                                    <cui jcr:primaryType="nt:unstructured">
+                                                        <inline
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,subsuperscript#subscript,subsuperscript#superscript,links#modifylink,links#unlink,links#anchor,#image,findreplace#find,findreplace#replace,spellcheck#checktext,misctools#specialchars,misctools#sourceedit,#styles,#paraformat,table#table]">
+                                                            <popovers jcr:primaryType="nt:unstructured">
+                                                                <justify
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                                        ref="justify"/>
+                                                                <lists
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                        ref="lists"/>
+                                                                <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                <styles
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="styles:getStyles:styles-pulldown"
+                                                                        ref="styles"/>
+                                                            </popovers>
+                                                        </inline>
+                                                    </cui>
+                                                </uiSettings>
+                                            </descriptionOverlay>
+                                            <logoOverlayUpload
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Logo Overlay"
+                                                    emptyText="Select Logo Overlay"
+                                                    name="./logo2OverlayRef">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <welcome jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                                    <article jcr:primaryType="nt:unstructured" text="Dark" value="dark"/>
+                                                </items>
+                                            </logoOverlayUpload>
+                                            <pictureDesktopOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Overlay Picture Desktop"
+                                                    fileNameParameter="./pictureDesktop2Overlay"
+                                                    fileReferenceParameter="./pictureDesktop2OverlayRef"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./slider2PictureDesktopOverlay"
+                                                    title="Overlay Picture Desktop"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                            <pictureMobileOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Overlay Picture Mobile"
+                                                    fileNameParameter="./pictureMobile2Overlay"
+                                                    fileReferenceParameter="./pictureMobile2OverlayRef"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./slider2PictureMobileOverlay"
+                                                    title="Picture Mobile"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                        </items>
+                                    </container3>
+                                    <logoUpload
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Logo Color"
+                                            emptyText="Select Logo Color"
+                                            name="./slider2Logo">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <welcome jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                            <article jcr:primaryType="nt:unstructured" text="Dark" value="dark"/>
+                                        </items>
+                                    </logoUpload>
+                                    <pictureDesktop
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Picture Desktop"
+                                            fileNameParameter="./pictureDesktop2"
+                                            fileReferenceParameter="./pictureDesktop2Ref"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./slider2PictureDesktop"
+                                            title="Picture Desktop"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                    <pictureMobile
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Picture Mobile"
+                                            fileNameParameter="./pictureMobile2"
+                                            fileReferenceParameter="./pictureMobile2Ref"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./slider2PictureMobile"
+                                            title="Picture Mobile"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                </items>
+                            </field>
+                        </items>
+                    </column>
+                </items>
+            </col2>
+            <col3
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="SLIDER 3"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    emptyText="Slider 3"
+                                    name="./linksMapSlider3">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <sliderType granite:class="cq-dialog-dropdown-showhide"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Type"
+                                            emptyText="Select Type"
+                                            name="./slider3Type">
+                                        <granite:data cq-dialog-dropdown-showhide-target=".slider-3-field" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <welcome jcr:primaryType="nt:unstructured" text="Welcome" value="welcome"/>
+                                            <article jcr:primaryType="nt:unstructured" text="Article" value="article"/>
+                                            <getinvolved jcr:primaryType="nt:unstructured" text="Get Involved" value="getinvolved"/>
+                                        </items>
+                                    </sliderType>
+                                    <title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Title"
+                                            emptyText="Enter Title"
+                                            name="./slider3Title"/>
+                                    <subtitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Headline"
+                                            emptyText="Enter Headline"
+                                            name="./slider3Subtitle"/>
+                                    <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Abstract"
+                                            emptyText="Enter Abstract"
+                                            name="./slider3Description"/>
+                                    <container1 granite:class="hide slider-3-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="welcome" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+
+                                        </items>
+                                    </container1>
+                                    <container2 granite:class="hide slider-3-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="article" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <date
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                    displayedFormat="dd MMMM DD YYYY"
+                                                    type="datetime"
+                                                    typeHint="Date"
+                                                    fieldLabel="Date"
+                                                    emptyText="Enter Date"
+                                                    name="./slider3Date"/>
+                                            <category
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Category"
+                                                    emptyText="Enter Category"
+                                                    name="./slider3Category"/>
+                                            <well-multifield
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/well"
+                                                    fieldLabel="Tags"
+                                                    class="hide slider-3-field"
+                                                    showhidetargetvalue="welcome">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <sliderTags3
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                            composite="{Boolean}true"
+                                                            fieldDescription="Tags"
+                                                            fieldLabel="Tags"
+                                                            required="{Boolean}false"
+                                                            name="slider3Tags" >
+                                                        <field
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                emptyText="Slider Tas"
+                                                                name="./slider3Tags">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <tags
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                                        fieldLabel="Tag"
+                                                                        emptyText="Select Tag"
+                                                                        name="./slider3Tag"/>
+                                                            </items>
+                                                        </field>
+                                                    </sliderTags3>
+                                                </items>
+                                            </well-multifield>
+                                            <button
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button"
+                                                    emptyText="Enter Button Text"
+                                                    name="./slider3Button"/>
+                                            <path
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Link"
+                                                    rootPath="/content/academy-ucs-remy/us/en"
+                                                    suffix=".html"
+                                                    name="./slider3Path"/>
+                                            <target
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Target"
+                                                    emptyText="Target Type"
+                                                    name="./slider3Target">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <blank jcr:primaryType="nt:unstructured" text="New Tab" value="_blank"/>
+                                                    <self jcr:primaryType="nt:unstructured" text="This Tab" value="_self"/>
+                                                </items>
+                                            </target>
+                                        </items>
+                                    </container2>
+                                    <container3 granite:class="hide slider-3-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="getinvolved" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <button
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button"
+                                                    emptyText="Enter Button Text"
+                                                    name="./slider3ButtonG"/>
+                                            <titleOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Overlay Title"
+                                                    emptyText="Enter Overlay Title"
+                                                    name="./slider3TitleOverlay"/>
+                                            <subtitleOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Overlay Headline"
+                                                    emptyText="Enter Overlay Headline"
+                                                    name="./slider3SubtitleOverlay"/>
+                                            <descriptionOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Overlay Abstract"
+                                                    emptyText="Enter Overlay Abstract"
+                                                    useFixedInlineToolbar="{Boolean}true"
+                                                    key="description"
+                                                    name="./slider3DescriptionOverlay">
+                                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                                    <format
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <links
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <findreplace
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <subsuperscript
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <spellcheck
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <misctools
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                                            <chars jcr:primaryType="nt:unstructured">
+                                                                <copyright
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#169;"/>
+                                                                <trademark
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8482;"/>
+                                                                <registered
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#174;"/>
+                                                                <emDash
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8212;"/>
+                                                                <pound
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#163;"/>
+                                                                <nbsp
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#160;"/>
+                                                            </chars>
+                                                        </specialCharsConfig>
+                                                    </misctools>
+                                                    <styles
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <styles jcr:primaryType="nt:unstructured">
+                                                            <plainSpan
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="defaultSpan"
+                                                                    text="Default (add span tag)"/>
+                                                            <lead
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="lead"
+                                                                    text="Lead"/>
+                                                        </styles>
+                                                    </styles>
+                                                    <table
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                </rtePlugins>
+                                                <uiSettings jcr:primaryType="nt:unstructured">
+                                                    <cui jcr:primaryType="nt:unstructured">
+                                                        <inline
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,subsuperscript#subscript,subsuperscript#superscript,links#modifylink,links#unlink,links#anchor,#image,findreplace#find,findreplace#replace,spellcheck#checktext,misctools#specialchars,misctools#sourceedit,#styles,#paraformat,table#table]">
+                                                            <popovers jcr:primaryType="nt:unstructured">
+                                                                <justify
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                                        ref="justify"/>
+                                                                <lists
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                        ref="lists"/>
+                                                                <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                <styles
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="styles:getStyles:styles-pulldown"
+                                                                        ref="styles"/>
+                                                            </popovers>
+                                                        </inline>
+                                                    </cui>
+                                                </uiSettings>
+                                            </descriptionOverlay>
+                                            <logoOverlayUpload
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Logo Overlay"
+                                                    emptyText="Select Logo Overlay"
+                                                    name="./logo3OverlayRef">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <welcome jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                                    <article jcr:primaryType="nt:unstructured" text="Dark" value="dark"/>
+                                                </items>
+                                            </logoOverlayUpload>
+                                            <pictureDesktopOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Overlay Picture Desktop"
+                                                    fileNameParameter="./pictureDesktop3Overlay"
+                                                    fileReferenceParameter="./pictureDesktop3OverlayRef"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./slider3PictureDesktopOverlay"
+                                                    title="Overlay Picture Desktop"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                            <pictureMobileOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Overlay Picture Mobile"
+                                                    fileNameParameter="./pictureMobile3Overlay"
+                                                    fileReferenceParameter="./pictureMobile3OverlayRef"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./slider3PictureMobileOverlay"
+                                                    title="Picture Mobile"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                        </items>
+                                    </container3>
+                                    <logoUpload
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Logo Color"
+                                            emptyText="Select Logo Color"
+                                            name="./slider3Logo">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <welcome jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                            <article jcr:primaryType="nt:unstructured" text="Dark" value="dark"/>
+                                        </items>
+                                    </logoUpload>
+                                    <pictureDesktop
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Picture Desktop"
+                                            fileNameParameter="./pictureDesktop3"
+                                            fileReferenceParameter="./pictureDesktop3Ref"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./slider3PictureDesktop"
+                                            title="Picture Desktop"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                    <pictureMobile
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Picture Mobile"
+                                            fileNameParameter="./pictureMobile3"
+                                            fileReferenceParameter="./pictureMobile3Ref"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./slider3PictureMobile"
+                                            title="Picture Mobile"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                </items>
+                            </field>
+                        </items>
+                    </column>
+                </items>
+            </col3>
+            <col4
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="SLIDER 4"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    emptyText="Slider 4"
+                                    name="./linksMapSlider4">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <sliderType granite:class="cq-dialog-dropdown-showhide"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Type"
+                                            emptyText="Select Type"
+                                            name="./slider4Type">
+                                        <granite:data cq-dialog-dropdown-showhide-target=".slider-4-field" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <welcome jcr:primaryType="nt:unstructured" text="Welcome" value="welcome"/>
+                                            <article jcr:primaryType="nt:unstructured" text="Article" value="article"/>
+                                            <getinvolved jcr:primaryType="nt:unstructured" text="Get Involved" value="getinvolved"/>
+                                        </items>
+                                    </sliderType>
+                                    <title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Title"
+                                            emptyText="Enter Title"
+                                            name="./slider4Title"/>
+                                    <subtitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Headline"
+                                            emptyText="Enter Headline"
+                                            name="./slider4Subtitle"/>
+                                    <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Abstract"
+                                            emptyText="Enter Abstract"
+                                            name="./slider4Description"/>
+                                    <container1 granite:class="hide slider-4-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="welcome" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+
+                                        </items>
+                                    </container1>
+                                    <container2 granite:class="hide slider-4-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="article" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <date
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                    displayedFormat="dd MMMM DD YYYY"
+                                                    type="datetime"
+                                                    typeHint="Date"
+                                                    fieldLabel="Date"
+                                                    emptyText="Enter Date"
+                                                    name="./slider4Date"/>
+                                            <category
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Category"
+                                                    emptyText="Enter Category"
+                                                    name="./slider4Category"/>
+                                            <well-multifield
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/well"
+                                                    fieldLabel="Tags"
+                                                    class="hide slider-4-field"
+                                                    showhidetargetvalue="welcome">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <sliderTags4
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                            composite="{Boolean}true"
+                                                            fieldDescription="Tags"
+                                                            fieldLabel="Tags"
+                                                            required="{Boolean}false"
+                                                            name="slider4Tags" >
+                                                        <field
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                emptyText="Slider Tas"
+                                                                name="./slider4Tags">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <tags
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                                        fieldLabel="Tag"
+                                                                        emptyText="Select Tag"
+                                                                        name="./slider4Tag"/>
+                                                            </items>
+                                                        </field>
+                                                    </sliderTags4>
+                                                </items>
+                                            </well-multifield>
+                                            <button
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button"
+                                                    emptyText="Enter Button Text"
+                                                    name="./slider4Button"/>
+                                            <path
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Link"
+                                                    rootPath="/content/academy-ucs-remy/us/en"
+                                                    suffix=".html"
+                                                    name="./slider4Path"/>
+                                            <target
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Target"
+                                                    emptyText="Target Type"
+                                                    name="./slider4Target">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <blank jcr:primaryType="nt:unstructured" text="New Tab" value="_blank"/>
+                                                    <self jcr:primaryType="nt:unstructured" text="This Tab" value="_self"/>
+                                                </items>
+                                            </target>
+                                        </items>
+                                    </container2>
+                                    <container3 granite:class="hide slider-4-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="getinvolved" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <button
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button"
+                                                    emptyText="Enter Button Text"
+                                                    name="./slider4ButtonG"/>
+                                            <titleOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Overlay Title"
+                                                    emptyText="Enter Overlay Title"
+                                                    name="./slider4TitleOverlay"/>
+                                            <subtitleOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Overlay Headline"
+                                                    emptyText="Enter Overlay Headline"
+                                                    name="./slider4SubtitleOverlay"/>
+                                            <descriptionOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Overlay Abstract"
+                                                    emptyText="Enter Overlay Abstract"
+                                                    useFixedInlineToolbar="{Boolean}true"
+                                                    key="description"
+                                                    name="./slider4DescriptionOverlay">
+                                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                                    <format
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <links
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <findreplace
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <subsuperscript
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <spellcheck
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <misctools
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                                            <chars jcr:primaryType="nt:unstructured">
+                                                                <copyright
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#169;"/>
+                                                                <trademark
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8482;"/>
+                                                                <registered
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#174;"/>
+                                                                <emDash
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8212;"/>
+                                                                <pound
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#163;"/>
+                                                                <nbsp
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#160;"/>
+                                                            </chars>
+                                                        </specialCharsConfig>
+                                                    </misctools>
+                                                    <styles
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <styles jcr:primaryType="nt:unstructured">
+                                                            <plainSpan
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="defaultSpan"
+                                                                    text="Default (add span tag)"/>
+                                                            <lead
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="lead"
+                                                                    text="Lead"/>
+                                                        </styles>
+                                                    </styles>
+                                                    <table
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                </rtePlugins>
+                                                <uiSettings jcr:primaryType="nt:unstructured">
+                                                    <cui jcr:primaryType="nt:unstructured">
+                                                        <inline
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,subsuperscript#subscript,subsuperscript#superscript,links#modifylink,links#unlink,links#anchor,#image,findreplace#find,findreplace#replace,spellcheck#checktext,misctools#specialchars,misctools#sourceedit,#styles,#paraformat,table#table]">
+                                                            <popovers jcr:primaryType="nt:unstructured">
+                                                                <justify
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                                        ref="justify"/>
+                                                                <lists
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                        ref="lists"/>
+                                                                <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                <styles
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="styles:getStyles:styles-pulldown"
+                                                                        ref="styles"/>
+                                                            </popovers>
+                                                        </inline>
+                                                    </cui>
+                                                </uiSettings>
+                                            </descriptionOverlay>
+                                            <logoOverlayUpload
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Logo Overlay"
+                                                    emptyText="Select Logo Overlay"
+                                                    name="./logo4OverlayRef">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <welcome jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                                    <article jcr:primaryType="nt:unstructured" text="Dark" value="dark"/>
+                                                </items>
+                                            </logoOverlayUpload>
+                                            <pictureDesktopOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Overlay Picture Desktop"
+                                                    fileNameParameter="./pictureDesktop4Overlay"
+                                                    fileReferenceParameter="./pictureDesktop4OverlayRef"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./slider4PictureDesktopOverlay"
+                                                    title="Overlay Picture Desktop"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                            <pictureMobileOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Overlay Picture Mobile"
+                                                    fileNameParameter="./pictureMobile4Overlay"
+                                                    fileReferenceParameter="./pictureMobile4OverlayRef"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./slider4PictureMobileOverlay"
+                                                    title="Picture Mobile"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                        </items>
+                                    </container3>
+                                    <logoUpload
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Logo Color"
+                                            emptyText="Select Logo Color"
+                                            name="./slider4Logo">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <welcome jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                            <article jcr:primaryType="nt:unstructured" text="Dark" value="dark"/>
+                                        </items>
+                                    </logoUpload>
+                                    <pictureDesktop
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Picture Desktop"
+                                            fileNameParameter="./pictureDesktop4"
+                                            fileReferenceParameter="./pictureDesktop4Ref"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./slider4PictureDesktop"
+                                            title="Picture Desktop"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                    <pictureMobile
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Picture Mobile"
+                                            fileNameParameter="./pictureMobile4"
+                                            fileReferenceParameter="./pictureMobile4Ref"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./slider4PictureMobile"
+                                            title="Picture Mobile"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                </items>
+                            </field>
+                        </items>
+                    </column>
+                </items>
+            </col4>
+            <col5
+                    jcr:primaryType="nt:unstructured"
+                    jcr:title="SLIDER 5"
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    emptyText="Slider 5"
+                                    name="./linksMapSlider5">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <sliderType granite:class="cq-dialog-dropdown-showhide"
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Type"
+                                            emptyText="Select Type"
+                                            name="./slider5Type">
+                                        <granite:data cq-dialog-dropdown-showhide-target=".slider-5-field" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <welcome jcr:primaryType="nt:unstructured" text="Welcome" value="welcome"/>
+                                            <article jcr:primaryType="nt:unstructured" text="Article" value="article"/>
+                                            <getinvolved jcr:primaryType="nt:unstructured" text="Get Involved" value="getinvolved"/>
+                                        </items>
+                                    </sliderType>
+                                    <title
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Title"
+                                            emptyText="Enter Title"
+                                            name="./slider5Title"/>
+                                    <subtitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Headline"
+                                            emptyText="Enter Headline"
+                                            name="./slider5Subtitle"/>
+                                    <description
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Abstract"
+                                            emptyText="Enter Abstract"
+                                            name="./slider5Description"/>
+                                    <container1 granite:class="hide slider-5-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="welcome" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+
+                                        </items>
+                                    </container1>
+                                    <container2 granite:class="hide slider-5-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="article" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <date
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                    displayedFormat="dd MMMM DD YYYY"
+                                                    type="datetime"
+                                                    typeHint="Date"
+                                                    fieldLabel="Date"
+                                                    emptyText="Enter Date"
+                                                    name="./slider5Date"/>
+                                            <category
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Category"
+                                                    emptyText="Enter Category"
+                                                    name="./slider5Category"/>
+                                            <well-multifield
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/well"
+                                                    fieldLabel="Tags"
+                                                    class="hide slider-5-field"
+                                                    showhidetargetvalue="welcome">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <sliderTags5
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                            composite="{Boolean}true"
+                                                            fieldDescription="Tags"
+                                                            fieldLabel="Tags"
+                                                            required="{Boolean}false"
+                                                            name="slider5Tags" >
+                                                        <field
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                emptyText="Slider Tas"
+                                                                name="./slider5Tags">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <tags
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                                                        fieldLabel="Tag"
+                                                                        emptyText="Select Tag"
+                                                                        name="./slider5Tag"/>
+                                                            </items>
+                                                        </field>
+                                                    </sliderTags5>
+                                                </items>
+                                            </well-multifield>
+                                            <button
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button"
+                                                    emptyText="Enter Button Text"
+                                                    name="./slider5Button"/>
+                                            <path
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Link"
+                                                    rootPath="/content/academy-ucs-remy/us/en"
+                                                    suffix=".html"
+                                                    name="./slider5Path"/>
+                                            <target
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Target"
+                                                    emptyText="Target Type"
+                                                    name="./slider5Target">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <blank jcr:primaryType="nt:unstructured" text="New Tab" value="_blank"/>
+                                                    <self jcr:primaryType="nt:unstructured" text="This Tab" value="_self"/>
+                                                </items>
+                                            </target>
+                                        </items>
+                                    </container2>
+                                    <container3 granite:class="hide slider-5-field" jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <granite:data showhidetargetvalue="getinvolved" jcr:primaryType="nt:unstructured"/>
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <button
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button"
+                                                    emptyText="Enter Button Text"
+                                                    name="./slider5ButtonG"/>
+                                            <titleOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Overlay Title"
+                                                    emptyText="Enter Overlay Title"
+                                                    name="./slider5TitleOverlay"/>
+                                            <subtitleOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Overlay Headline"
+                                                    emptyText="Enter Overlay Headline"
+                                                    name="./slider5SubtitleOverlay"/>
+                                            <descriptionOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                    fieldLabel="Overlay Abstract"
+                                                    emptyText="Enter Overlay Abstract"
+                                                    useFixedInlineToolbar="{Boolean}true"
+                                                    key="description"
+                                                    name="./slider5DescriptionOverlay">
+                                                <rtePlugins jcr:primaryType="nt:unstructured">
+                                                    <format
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <justify
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <lists
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <paraformat
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <links
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <image
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <findreplace
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <subsuperscript
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <spellcheck
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                    <misctools
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <specialCharsConfig jcr:primaryType="nt:unstructured">
+                                                            <chars jcr:primaryType="nt:unstructured">
+                                                                <copyright
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#169;"/>
+                                                                <trademark
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8482;"/>
+                                                                <registered
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#174;"/>
+                                                                <emDash
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#8212;"/>
+                                                                <pound
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#163;"/>
+                                                                <nbsp
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        entity="&amp;#160;"/>
+                                                            </chars>
+                                                        </specialCharsConfig>
+                                                    </misctools>
+                                                    <styles
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*">
+                                                        <styles jcr:primaryType="nt:unstructured">
+                                                            <plainSpan
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="defaultSpan"
+                                                                    text="Default (add span tag)"/>
+                                                            <lead
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cssName="lead"
+                                                                    text="Lead"/>
+                                                        </styles>
+                                                    </styles>
+                                                    <table
+                                                            jcr:primaryType="nt:unstructured"
+                                                            features="*"/>
+                                                </rtePlugins>
+                                                <uiSettings jcr:primaryType="nt:unstructured">
+                                                    <cui jcr:primaryType="nt:unstructured">
+                                                        <inline
+                                                                jcr:primaryType="nt:unstructured"
+                                                                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,subsuperscript#subscript,subsuperscript#superscript,links#modifylink,links#unlink,links#anchor,#image,findreplace#find,findreplace#replace,spellcheck#checktext,misctools#specialchars,misctools#sourceedit,#styles,#paraformat,table#table]">
+                                                            <popovers jcr:primaryType="nt:unstructured">
+                                                                <justify
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[justify#justifyleft,justify#justifycenter,justify#justifyright]"
+                                                                        ref="justify"/>
+                                                                <lists
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                                                                        ref="lists"/>
+                                                                <paraformat
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="paraformat:getFormats:paraformat-pulldown"
+                                                                        ref="paraformat"/>
+                                                                <styles
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        items="styles:getStyles:styles-pulldown"
+                                                                        ref="styles"/>
+                                                            </popovers>
+                                                        </inline>
+                                                    </cui>
+                                                </uiSettings>
+                                            </descriptionOverlay>
+                                            <logoOverlayUpload
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Logo Overlay"
+                                                    emptyText="Select Logo Overlay"
+                                                    name="./logo5OverlayRef">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <welcome jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                                    <article jcr:primaryType="nt:unstructured" text="Dark" value="dark"/>
+                                                </items>
+                                            </logoOverlayUpload>
+                                            <pictureDesktopOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Overlay Picture Desktop"
+                                                    fileNameParameter="./pictureDesktop5Overlay"
+                                                    fileReferenceParameter="./pictureDesktop5OverlayRef"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./slider5PictureDesktopOverlay"
+                                                    title="Overlay Picture Desktop"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                            <pictureMobileOverlay
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Overlay Picture Mobile"
+                                                    fileNameParameter="./pictureMobile5Overlay"
+                                                    fileReferenceParameter="./pictureMobile5OverlayRef"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./slider5PictureMobileOverlay"
+                                                    title="Picture Mobile"
+                                                    uploadUrl="${suffix.path}"
+                                                    useHTML5="{Boolean}true"/>
+                                        </items>
+                                    </container3>
+                                    <logoUpload
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                            fieldLabel="Logo Color"
+                                            emptyText="Select Logo Color"
+                                            name="./slider5Logo">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <welcome jcr:primaryType="nt:unstructured" text="White" value="white"/>
+                                            <article jcr:primaryType="nt:unstructured" text="Dark" value="dark"/>
+                                        </items>
+                                    </logoUpload>
+                                    <pictureDesktop
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Picture Desktop"
+                                            fileNameParameter="./pictureDesktop5"
+                                            fileReferenceParameter="./pictureDesktop5Ref"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./slider5PictureDesktop"
+                                            title="Picture Desktop"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                    <pictureMobile
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/form/fileupload"
+                                            allowUpload="{Boolean}false"
+                                            autoStart="{Boolean}false"
+                                            class="cq-droptarget"
+                                            fieldLabel="Picture Mobile"
+                                            fileNameParameter="./pictureMobile5"
+                                            fileReferenceParameter="./pictureMobile5Ref"
+                                            mimeTypes="[image]"
+                                            multiple="{Boolean}false"
+                                            name="./slider5PictureMobile"
+                                            title="Picture Mobile"
+                                            uploadUrl="${suffix.path}"
+                                            useHTML5="{Boolean}true"/>
+                                </items>
+                            </field>
+                        </items>
+                    </column>
+                </items>
+            </col5>
         </items>
     </content>
 </jcr:root>
