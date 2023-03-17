@@ -94,6 +94,7 @@
   -ms-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  color: #262626;
 }
 @media only screen and (max-width: 1024px) {
   .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .hero__title {
@@ -670,14 +671,14 @@
   opacity: 1;
 }
 .heroBanner-welcome .gradient--type-two:before {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 .heroBanner-welcome .gradient--type-three:before {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 @media only screen and (max-width: 1024px) {
   .heroBanner-welcome .gradient--type-three:before {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
 .heroBanner-welcome .heroBanner__arrows {
