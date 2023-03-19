@@ -14,186 +14,34 @@
                     sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
                     name="./slider">
                 <items jcr:primaryType="nt:unstructured">
-                    <sliderPosition1
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/container">
-                        <items jcr:primaryType="nt:unstructured">
-                            <sliderSelect
-                                    granite:class="presets"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                    fieldLabel="1ST PLACE"
-                                    name="./sliderPosition1Slider">
+                        <sliderPosition
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="academy-ucs-remy/components/structure/heroslider/orderslider"
+                                title="Slider Positions"
+                                name="./sliderPosition">
                                 <items jcr:primaryType="nt:unstructured">
-                                    
-                                    <slider1
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 1"
-                                            value="slider1"/>
-                                    <slider2
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 2"
-                                            value="slider2"/>
-                                    <slider3
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 3"
-                                            value="slider3"/>
-                                    <slider4
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 4"
-                                            value="slider4"/>
-                                    <slider5
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 5"
-                                            value="slider5"/>
+                                        <slider1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="SLIDER 1"
+                                                value="slider1"/>
+                                        <slider2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="SLIDER 2"
+                                                value="slider2"/>
+                                        <slider3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="SLIDER 3"
+                                                value="slider3"/>
+                                        <slider4
+                                                jcr:primaryType="nt:unstructured"
+                                                text="SLIDER 4"
+                                                value="slider4"/>
+                                        <slider5
+                                                jcr:primaryType="nt:unstructured"
+                                                text="SLIDER 5"
+                                                value="slider5"/>
                                 </items>
-                            </sliderSelect>
-                        </items>
-                    </sliderPosition1>
-                    <sliderPosition2
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/container">
-                        <items jcr:primaryType="nt:unstructured">
-                            <sliderSelect
-                                    granite:class="presets"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                    fieldLabel="2ND PLACE"
-                                    name="./sliderPosition2Slider">
-                                <items jcr:primaryType="nt:unstructured">
-                                    
-                                    <slider1
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 1"
-                                            value="slider1"/>
-                                    <slider2
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 2"
-                                            value="slider2"/>
-                                    <slider3
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 3"
-                                            value="slider3"/>
-                                    <slider4
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 4"
-                                            value="slider4"/>
-                                    <slider5
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 5"
-                                            value="slider5"/>
-                                </items>
-                            </sliderSelect>
-                        </items>
-                    </sliderPosition2>
-                    <sliderPosition3
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/container">
-                        <items jcr:primaryType="nt:unstructured">
-                            <sliderSelect
-                                    granite:class="presets"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                    fieldLabel="3RD PLACE"
-                                    name="./sliderPosition3Slider">
-                                <items jcr:primaryType="nt:unstructured">
-                                    <slider1
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 1"
-                                            value="slider1"/>
-                                    <slider2
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 2"
-                                            value="slider2"/>
-                                    <slider3
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 3"
-                                            value="slider3"/>
-                                    <slider4
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 4"
-                                            value="slider4"/>
-                                    <slider5
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 5"
-                                            value="slider5"/>
-                                </items>
-                            </sliderSelect>
-                        </items>
-                    </sliderPosition3>
-                    <sliderPosition4
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/container">
-                        <items jcr:primaryType="nt:unstructured">
-                            <sliderSelect
-                                    granite:class="presets"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                    fieldLabel="4TH PLACE"
-                                    name="./sliderPosition4Slider">
-                                <items jcr:primaryType="nt:unstructured">
-                                    <slider1
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 1"
-                                            value="slider1"/>
-                                    <slider2
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 2"
-                                            value="slider2"/>
-                                    <slider3
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 3"
-                                            value="slider3"/>
-                                    <slider4
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 4"
-                                            value="slider4"/>
-                                    <slider5
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 5"
-                                            value="slider5"/>
-                                </items>
-                            </sliderSelect>
-                        </items>
-                    </sliderPosition4>
-                    <sliderPosition5
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/container">
-                        <items jcr:primaryType="nt:unstructured">
-                            <sliderSelect
-                                    granite:class="presets"
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                    fieldLabel="5TH PLACE"
-                                    name="./sliderPosition5Slider">
-                                <items jcr:primaryType="nt:unstructured">
-                                    <slider1
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 1"
-                                            value="slider1"/>
-                                    <slider2
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 2"
-                                            value="slider2"/>
-                                    <slider3
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 3"
-                                            value="slider3"/>
-                                    <slider4
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 4"
-                                            value="slider4"/>
-                                    <slider5
-                                            jcr:primaryType="nt:unstructured"
-                                            text="SLIDER 5"
-                                            value="slider5"/>
-                                </items>
-                            </sliderSelect>
-                            
-                            
-                            
-                        </items>
-                    </sliderPosition5>
+                        </sliderPosition>
                 </items>
             </tools>
             <col1
