@@ -13,3 +13,5 @@ header.js
 heroBanner.js
 heroBanner__welcome.js
 heroBanner__article.js
+relatedArticles.js
+relatedHashtags.js
