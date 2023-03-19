@@ -95,6 +95,14 @@
   -ms-flex-align: center;
   align-items: center;
 }
+.heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .hero__title.dark,
+.heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .hero__subtitle.dark {
+  color: #262626;
+}
+.heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .hero__title.light,
+.heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .hero__subtitle.light {
+  color: #ffffff;
+}
 @media only screen and (max-width: 1024px) {
   .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .hero__title {
     font-size: 35px;
@@ -103,6 +111,7 @@
 }
 .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .hero__subtitle {
   font-size: 20px;
+  color: #FFFFFF;
 }
 @media only screen and (max-width: 1024px) {
   .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type1 .hero__subtitle {
@@ -390,6 +399,7 @@
     height: auto;
     padding: 100px 15px 0;
     width: 100%;
+    position: absolute;
   }
 }
 .heroBanner-welcome .heroBanner__modal .modal__top-bar {
@@ -449,7 +459,7 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  margin-top: 10%;
+  /* margin-top: 10%; */
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .heroBanner-welcome .heroBanner__modal .modal {
@@ -468,6 +478,7 @@
     -moz-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
+    margin-top: 20px;
   }
 }
 .heroBanner-welcome .heroBanner__modal .modal__info {
