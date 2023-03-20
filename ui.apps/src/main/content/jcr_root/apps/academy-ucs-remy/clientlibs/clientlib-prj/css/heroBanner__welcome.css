@@ -152,6 +152,9 @@
   display: -webkit-box;
   overflow: hidden;
 }
+.dark .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .hero__info .hero__title {
+  color: #262626;
+}
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .hero__info .hero__title {
     max-height: 100px;
@@ -256,6 +259,9 @@
 .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .hero__info .hero__date {
   line-height: 1.33;
 }
+.dark .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .hero__info .hero__date {
+  color: #262626;
+}
 @media only screen and (max-width: 1024px) {
   .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .hero__info .hero__date {
     margin-bottom: 22px;
@@ -270,6 +276,9 @@
   -webkit-box-orient: vertical;
   display: -webkit-box;
   overflow: hidden;
+}
+.dark .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .hero__info .hero__desc {
+  color: #262626;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type2 .hero__info .hero__desc {
@@ -322,6 +331,9 @@
   -ms-flex-align: flex-end;
   align-items: flex-end;
 }
+.dark .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .hero__info .hero__title {
+  color: #262626;
+}
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .hero__info .hero__title {
     max-height: 100px;
@@ -343,6 +355,9 @@
   display: -webkit-box;
   overflow: hidden;
 }
+.dark .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .hero__info .hero__subtitle {
+  color: #262626;
+}
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .hero__info .hero__subtitle {
     max-height: 45px;
@@ -362,6 +377,9 @@
   -webkit-box-orient: vertical;
   display: -webkit-box;
   overflow: hidden;
+}
+.dark .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .hero__info .hero__desc {
+  color: #262626;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .heroBanner-welcome .heroBanner__container .heroBanner__wrapper .heroBanner__slide--type3 .hero__info .hero__desc {
@@ -457,9 +475,9 @@
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
+  display: -webkit-flex; 
   display: flex;
-  /* margin-top: 10%; */
+  margin-top: 10%;
 }
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .heroBanner-welcome .heroBanner__modal .modal {
