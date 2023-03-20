@@ -1,0 +1,231 @@
+<sly data-sly-use.modelpropertiess="it.codeland.ucs.remy.core.models.ModelRelatedArticles">
+
+    <div class="heroBanner-article">
+        <div class="heroBanner__main container-fixed">
+            <div
+                    class="heroBanner__wrapper gradient gradient__hero"
+                    data-bg="${properties.imageArticleRef}"
+                    data-bg-mobile="${properties.imageArticleRef}"
+            >
+                <div class="hero__mask text--subtitle" data-mask="dark">
+                    <img class="mask__logo" src="/content/dam/academy-ucs-remy/hero-slider/newLight.png" alt="logo__mask" />
+                </div>
+                <div class="hero container">
+                    <div class="hero__info">
+                        <p class="hero__title text--headline">${currentPage.title}</p>
+                        <div class="hero__lables">
+                  <span class="hero__lable text--labelBg bg--lipstick"
+                  >${properties.category}</span
+                  >
+                            <div class="hero__hashtag hashTag">#${properties.hashtag}</div>
+                        </div>
+
+                        <p class="hero__date text--subtitle">${ 'EEEE d MMM YYYY' @ format=properties.date, type='date'}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="share-menu">
+                <div class="share__wrapper container">
+                    <div class="share-cta">
+                        <div class="share__button icon icon-share"></div>
+                        <span class="text--body">SHARE</span>
+                        <div class="share-list">
+                            <div class="share__item share__twitter">
+                                <div class="icon icon-twitter"></div>
+                                <a class="text--label">TWITTER</a>
+                            </div>
+                            <div class="share__item share__linkedin">
+                                <div class="icon icon-linkedin"></div>
+                                <a class="text--label">LINKEDIN</a>
+                            </div>
+                            <div class="share__item share__mail">
+                                <div class="icon icon-email"></div>
+                                <a class="text--label">MAIL</a>
+                            </div>
+                            <div class="share__item share__copylink">
+                                <div class="icon icon-link"></div>
+                                <a class="text--label">COPYLINK</a>
+                            </div>
+                            <sly data-sly-test.isEditMode="${wcmmode.edit}">
+                                <div class="line"></div>
+                                <div class="share__item share__copylink">
+                                    <div class="icon icon-export"></div>
+                                    <a target="_blank" href="/content/academy-ucs-remy/magazine/${properties.name}/jcr:content/related-articles.export.tidy.json" class="text--label">EXPORT</a>
+                                </div>
+                            </sly>
+                            <div class="line"></div>
+                            <div class="share__item share__print">
+                                <div class="icon icon-print"></div>
+                                <a class="text--label">PRINT</a>
+                            </div>
+                            <div class="share__close icon icon-close"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ******************* START BREADCRUMB ******************* -->
+    <div class="breadCrumb">
+        <div class="container container--width">
+            <div class="breadCrumb__desktop">
+                <ul>
+                    <li>
+                        <a href="#">OneUnicredit</a>
+                    </li>
+                    <li>
+                        <a href="#">Our people</a>
+                    </li>
+                    <li class="breadCrumbItem__last">
+                        <span>${properties.hashtag}</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="breadCrumb__mobile">
+                <div class="breadCrumb__button">
+                    <span class="icon-down"></span>
+                    <a href="#" class="text--label">BACK to OUR PEOPLE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ******************* END BREADCRUMB ******************* -->
+
+    <!-- ******************* START ABSTRACT TIME ******************* -->
+    <div class="abstractTime">
+        <div class="container">
+            <div class="abstractTime__abstract text--headline">
+                ${properties.text}
+            </div>
+            <div class="abstractTime__time">
+                <span class="icon-time"></span>
+                <span class="abstractTime__timeValue text--label">${ 'HH:MM' @ format=properties['jcr:lastModified'], type='date'} MIN</span>
+            </div>
+        </div>
+    </div>
+    <!-- ******************* END ABSTRACT TIME ******************* -->
+
+    <!-- ******************* START TEXT AND QUOTATION ******************* -->
+    <div class="textAndQuotation" data-quotation="true" data-capital="true">
+        <div class="container">
+            <div class="textAndQuotation__capitalTextSection">
+                <div class="textAndQuotation__capitalTextContainer">
+                    <p>
+                        ${properties.summary @context='html'}
+                    </p>
+                </div>
+            </div>
+            <div class="textAndQuotation__textQuotationSection">
+                <div class="textQuotationSection__quotation">
+                    <blockquote>
+                        <p>
+                            ${properties.quote @context='html'}
+                        </p>
+                    </blockquote>
+                    <div class="textQuotationSection__signature">${properties.signature}</div>
+                </div>
+                <div class="textQuotationSection__lowerPartParagraph">
+                    <p>
+                        ${properties.description @context='html'}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ******************* END TEXT AND QUOTATION ******************* -->
+
+    <!--            &lt;!&ndash; ******************* START PHOTOGALLERY ******************* &ndash;&gt;-->
+    <!--            <div class="photogallery container-fixed">-->
+    <!--                &lt;!&ndash; Swiper Top&ndash;&gt;-->
+    <!--                <div class="swiper-container gallery-top">-->
+    <!--                    <div class="swiper-wrapper" data-modal>-->
+    <!--                        <div-->
+    <!--                                class="swiper-slide"-->
+    <!--                                data-bg="${relatedArticle.image}"-->
+    <!--                                data-bg-mobile="${relatedArticle.image}"-->
+    <!--                        >-->
+    <!--                          <span class="swiper-text">-->
+    <!--                            ${relatedArticle.title}-->
+    <!--                          </span>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                    &lt;!&ndash; Expand &ndash;&gt;-->
+    <!--                    <div class="photogallery__expand">-->
+    <!--                        <div class="icon icon-expand"></div>-->
+    <!--                    </div>-->
+    <!--                    &lt;!&ndash; Arrows &ndash;&gt;-->
+    <!--                    <div data-arrows class="photogallery__arrows">-->
+    <!--                        <div data-prev-small white class="icon-down prev"></div>-->
+    <!--                        <div data-number white>-->
+    <!--                            <span class="current"></span> / <span class="total"></span>-->
+    <!--                        </div>-->
+    <!--                        <div data-next-small white class="icon-down next"></div>-->
+    <!--                    </div>-->
+    <!--                    &lt;!&ndash; Paginator &ndash;&gt;-->
+    <!--                    <div-->
+    <!--                            data-pagination-->
+    <!--                            data-hero-pagination-->
+    <!--                            class="photogallery__pagination"-->
+    <!--                    ></div>-->
+    <!--                </div>-->
+    <!--                &lt;!&ndash; Text Middle &ndash;&gt;-->
+    <!--                <div class="swiper-text&#45;&#45;middle container&#45;&#45;picture">-->
+    <!--                    <p class="text-middle text&#45;&#45;body"></p>-->
+    <!--                </div>-->
+    <!--                &lt;!&ndash; Swiper Bottom &ndash;&gt;-->
+    <!--                <div class="swiper-container gallery-thumbs container&#45;&#45;picture">-->
+    <!--                    <div class="swiper-wrapper">-->
+    <!--                        <div-->
+    <!--                                class="swiper-slide"-->
+    <!--                                data-bg="components/photogallery/img/small-1.png"-->
+    <!--                                data-bg-mobile="components/photogallery/img/small-1.png"-->
+    <!--                        ></div>-->
+    <!--                        <div-->
+    <!--                                class="swiper-slide"-->
+    <!--                                data-bg="components/photogallery/img/small-2.png"-->
+    <!--                                data-bg-mobile="components/photogallery/img/small-2.png"-->
+    <!--                        ></div>-->
+    <!--                        <div-->
+    <!--                                class="swiper-slide"-->
+    <!--                                data-bg="components/photogallery/img/small-3.png"-->
+    <!--                                data-bg-mobile="components/photogallery/img/small-3.png"-->
+    <!--                        ></div>-->
+    <!--                        <div-->
+    <!--                                class="swiper-slide"-->
+    <!--                                data-bg="components/photogallery/img/small-4.png"-->
+    <!--                                data-bg-mobile="components/photogallery/img/small-4.png"-->
+    <!--                        ></div>-->
+    <!--                        <div-->
+    <!--                                class="swiper-slide"-->
+    <!--                                data-bg="components/photogallery/img/small-5.png"-->
+    <!--                                data-bg-mobile="components/photogallery/img/small-5.png"-->
+    <!--                        ></div>-->
+    <!--                        <div-->
+    <!--                                class="swiper-slide"-->
+    <!--                                data-bg="components/photogallery/img/small-6.png"-->
+    <!--                                data-bg-mobile="components/photogallery/img/small-6.png"-->
+    <!--                        ></div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--                &lt;!&ndash; Modal &ndash;&gt;-->
+    <!--                <div class="photogallery__modal ucg-icons__newPackage">-->
+    <!--                    <div class="icon-box container">-->
+    <!--                        <div class="icon icon-close modal__close"></div>-->
+    <!--                    </div>-->
+    <!--                    <div class="picture container" data-bg data-bg-mobile></div>-->
+    <!--                    <div class="arrow-box container">-->
+    <!--                        <div data-arrows class="photogallery__arrows">-->
+    <!--                            <div data-prev-small white class="icon-down prev"></div>-->
+    <!--                            <div data-number white>-->
+    <!--                                <span class="current">1</span> / <span class="total">3</span>-->
+    <!--                            </div>-->
+    <!--                            <div data-next-small white class="icon-down next"></div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--            &lt;!&ndash; ******************* END PHOTOGALLERY ******************* &ndash;&gt;-->
+
+</sly>

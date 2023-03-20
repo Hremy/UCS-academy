@@ -1,0 +1,38 @@
+<sly data-sly-use.modelRelatedHashtags="it.codeland.ucs.remy.core.models.ModelRelatedHashtags">
+    <div class="relatedHashtag container-fixed">
+        <div class="relatedHashtag__bar container">
+            <div class="bar__title text--subtitle">RELATED HASHTAG:</div>
+            <div class="bar__list">
+
+                <sly data-sly-list.itemRelatedHashtag="${modelRelatedHashtags.relatedHashtags}">
+                    <div data-hashtag="${itemRelatedHashtag.hashtag}" class="bar__item text--body">
+                        #${itemRelatedHashtag.hashtag}
+                    </div>
+                </sly>
+
+            </div>
+        </div>
+        <div class="relatedHashtag__result container">
+            <div class="result__cta">
+                <div class="result__number">
+                    <span class="number text--paragraph-title">0</span>
+                    <span class="results text--body">results</span>
+                </div>
+                <div class="result__close">
+                    <span class="text--label">${properties.relatedArticlesButtonClose}</span>
+                    <span class="icon icon-close"></span>
+                </div>
+            </div>
+            <div class="result__cards">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper"></div>
+                    <div
+                            class="swiper-pagination"
+                            data-hero-pagination
+                            data-pagination
+                    ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</sly>
