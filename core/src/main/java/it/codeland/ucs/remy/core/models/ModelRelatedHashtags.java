@@ -1,0 +1,67 @@
+package it.codeland.ucs.remy.core.models;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import javax.annotation.PostConstruct;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.models.annotations.Default;
+import org.apache.sling.models.annotations.DefaultInjectionStrategy;
+import org.apache.sling.models.annotations.Exporter;
+import org.apache.sling.models.annotations.ExporterOption;
+import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.InjectionStrategy;
+import org.apache.sling.models.annotations.injectorspecific.SlingObject;
+import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+@Model(adaptables = {Resource.class}, resourceType = {"academy-ucs-remy/components/structure/articlepage"}, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
+@Exporter(selector = "export", name = "jackson", extensions = {"json"}, options = {@ExporterOption(name = "SerializationFeature.WRITE_DATES_AS_TIMESTAMPS", value = "true")})
+public class ModelRelatedHashtags {
+  private static final Logger LOG = LoggerFactory.getLogger(ModelRelatedHashtags.class);
+  
+  @ValueMapValue(name = "sling:resourceType", injectionStrategy = InjectionStrategy.OPTIONAL)
+  @Default(values = {"No resourceType"})
+  protected String resourceType;
+  
+  @SlingObject
+  private Resource resource;
+  
+  @SlingObject
+  private ResourceResolver resourceResolver;
+  
+  @PostConstruct
+  protected void init() {}
+  
+  public List<Map<String, String>> getRelatedHashtags() {
+    ArrayList<Map<String, String>> listMapRelatedHashtag = new ArrayList<>();
+    try {
+      Resource resourceField = this.resource.getChild("linksMapRelatedHashtags");
+      if (resourceField != null)
+        for (Resource itemHashtag : resourceField.getChildren()) {
+          Map<String, String> mapHashtag = new HashMap<>();
+          String tag = (String)itemHashtag.getValueMap().get("hashtag", String.class);
+          if (tag != null) {
+            tag = tag.replace(":", "/");
+            tag = "/content/cq:tags/" + tag;
+            LOG.info("\n hashtag {} ", tag);
+            Resource resourceTag = this.resourceResolver.getResource(tag);
+            LOG.info("\n resourceTag {} ", resourceTag);
+            if (resourceTag != null) {
+              String hashtag = (String)resourceTag.getValueMap().get("jcr:title", "");
+              mapHashtag.put("tag", tag);
+              mapHashtag.put("hashtag", hashtag);
+              listMapRelatedHashtag.add(mapHashtag);
+              LOG.info("\n mapHashtag {} ", mapHashtag);
+            } 
+          } 
+        }  
+    } catch (Exception e) {
+      LOG.error("\n ERROR while getting Related Hashtag Items {} ", e.toString());
+    } 
+    return listMapRelatedHashtag;
+  }
+}

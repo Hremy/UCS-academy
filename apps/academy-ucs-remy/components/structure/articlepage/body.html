@@ -1,0 +1,25 @@
+<link rel="icon" type="image/vnd.microsoft.icon"
+    href="https://www.unicreditgroup.eu/etc/designs/unicreditgroupn/favicon.ico" />
+  <link rel="shortcut icon" type="image/vnd.microsoft.icon"
+    href="https://www.unicreditgroup.eu/etc/designs/unicreditgroupn/favicon.ico" />
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" 
+     data-sly-call="${clientLib.css @ categories='academy-ucs-remy.site'}" data-sly-unwrap/>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" 
+     data-sly-call="${clientLib.css @ categories='academy-ucs-remy.prj'}" data-sly-unwrap/>
+
+
+<div data-sly-resource="${'header' @ resourceType='academy-ucs-remy/components/structure/header'}"></div>
+
+<main class="main-content welcome-page ucg-icons__newPackage">
+
+     <sly data-sly-resource="${'parsys' @ resourceType='wcm/foundation/components/parsys'}"></sly>
+
+</main>
+
+<div data-sly-resource="${'footer' @ resourceType='academy-ucs-remy/components/structure/footer'}"></div>
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" 
+     data-sly-call="${clientLib.js @ categories='academy-ucs-remy.site'}" data-sly-unwrap/>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html" 
+     data-sly-call="${clientLib.js @ categories='academy-ucs-remy.prj'}" data-sly-unwrap/>

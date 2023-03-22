@@ -1,0 +1,55 @@
+<sly data-sly-use.model="it.codeland.ucs.remy.core.models.OtherPage"></sly>
+
+<div class="navbar__hamburger">
+    <div class="navbar__first-level">
+      <div class="navbar__back text--label">
+        <div class="icon icon-back"></div>
+        <span>BACK</span>
+      </div>
+      <div class="first-level__items">
+
+        <sly data-sly-list.item="${model.homePage.listChildren}">
+          <div data-sly-test="${!item.hideInNav}" data-nav-1="${item.name}" class="first-level__item ${item.name}" href="${item.path}.html">
+            <span class="item__text text--label">${item.title}</span>
+            <span class="icon icon-forth"></span>
+          </div>
+        </sly>
+
+      </div>
+
+      <div class="navbar__languages">
+        <div class="languages__selector">
+          <p class="selector__text text--label">ITA</p>
+          <span class="icon icon-down"></span>
+          <div class="selector__items">
+            <a class="selector__item selector__item--active text--label" data-lang="ITA" data-lang-dk="ITALIANO"
+              data-lang-m="IT" href="#">ITALIANO</a>
+            <a class="selector__item text--label" data-lang="ENG" href="#" data-lang-dk="ENGLISH"
+              data-lang-m="EN">ENGLISH</a>
+            <a class="selector__item selector__item--disabled text--label" data-lang="DE" data-lang-dk="DEUTSCHE"
+              data-lang-m="DE" href="#">DEUTSCHE</a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar__second-level">
+
+
+      <sly data-sly-list.level1="${model.homePage.listChildren}">
+       
+        <div class="second-level__items ${level1.name}" data-nav-2="${level1.name}">
+          <div class="container">
+            <a class="second-level__item--title text--paragraph-title" href="${level2.path}.html">
+              ${level1.title}
+            </a>
+          <sly data-sly-list.level2="${level1.listChildren}">
+            <a data-sly-test =${!level2.hideInNav} class="second-level__item text--body" href="${level2.path}.html">${level2.title}</a>
+          </sly>
+        </div>
+      </div>
+      </sly>
+      </div>
+    </div>
+  </div>
+
+
+

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="RELATED HASHTAGS"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/tabs">
+        <items jcr:primaryType="nt:unstructured">
+            <col1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Settings"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="ARTICLES"
+                        sling:resourceType="granite/ui/components/foundation/container"
+                        name="./relatedArticles">
+                        <items jcr:primaryType="nt:unstructured">
+                            <close
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                emptyText="Enter Close Button Title"
+                                fieldLabel="Close Button"
+                                name="./relatedArticlesButtonClose"/>
+                            <max
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                emptyText="Select Max Orders per Tag"
+                                fieldLabel="Max Article"
+                                name="./relatedArticlesMax">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <max1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="1"
+                                        value="1"/>
+                                    <max2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="2"
+                                        value="2"/>
+                                    <max3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="3"
+                                        value="3"/>
+                                    <max4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="4"
+                                        value="4"/>
+                                    <max5
+                                        jcr:primaryType="nt:unstructured"
+                                        text="5"
+                                        value="5"/>
+                                    <max6
+                                        jcr:primaryType="nt:unstructured"
+                                        text="6"
+                                        value="6"/>
+                                    <max7
+                                        jcr:primaryType="nt:unstructured"
+                                        text="7"
+                                        value="7"/>
+                                    <max8
+                                        jcr:primaryType="nt:unstructured"
+                                        text="8"
+                                        value="8"/>
+                                    <max9
+                                        jcr:primaryType="nt:unstructured"
+                                        text="9"
+                                        value="9"/>
+                                    <max10
+                                        jcr:primaryType="nt:unstructured"
+                                        text="10"
+                                        value="10"/>
+                                    <max11
+                                        jcr:primaryType="nt:unstructured"
+                                        text="11"
+                                        value="11"/>
+                                    <max12
+                                        jcr:primaryType="nt:unstructured"
+                                        text="12"
+                                        value="12"/>
+                                    <max13
+                                        jcr:primaryType="nt:unstructured"
+                                        text="13"
+                                        value="13"/>
+                                    <max14
+                                        jcr:primaryType="nt:unstructured"
+                                        text="14"
+                                        value="14"/>
+                                    <max15
+                                        jcr:primaryType="nt:unstructured"
+                                        text="15"
+                                        value="15"/>
+                                    <max16
+                                        jcr:primaryType="nt:unstructured"
+                                        text="16"
+                                        value="16"/>
+                                    <max17
+                                        jcr:primaryType="nt:unstructured"
+                                        text="17"
+                                        value="17"/>
+                                    <max18
+                                        jcr:primaryType="nt:unstructured"
+                                        text="18"
+                                        value="18"/>
+                                    <max19
+                                        jcr:primaryType="nt:unstructured"
+                                        text="19"
+                                        value="19"/>
+                                    <max20
+                                        jcr:primaryType="nt:unstructured"
+                                        text="20"
+                                        value="20"/>
+                                </items>
+                            </max>
+                            <order
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                emptyText="Select Order"
+                                fieldLabel="Article Order"
+                                name="./relatedArticlesOrder">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <dateDescending
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Date Descending"
+                                        value="date_descending"/>
+                                    <dateAscending
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Date Ascending"
+                                        value="date_ascending"/>
+                                </items>
+                            </order>
+                        </items>
+                    </container>
+                </items>
+            </col1>
+            <col2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="HASHTAGS"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <well-multifield-related-hashtags
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                        fieldLabel="Related HashTags">
+                        <items jcr:primaryType="nt:unstructured">
+                            <linksMapRelatedHashtags
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldDescription="Related HashTags"
+                                fieldLabel="Related HashTags"
+                                name="linksMapRelatedHashtags"
+                                required="{Boolean}false">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    emptyText="Related HashTags"
+                                    name="./linksMapRelatedHashtags">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <hashtag
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/coral/common/form/tagfield"
+                                            emptyText="Select Tag"
+                                            fieldLabel="Related HashTag"
+                                            multiple="{Boolean}false"
+                                            name="./hashtag"
+                                            rootPath="/content/cq:tags/academy-ucs-remy"
+                                            tagsBasePath="/etc/tags/unicredit"/>
+                                    </items>
+                                </field>
+                            </linksMapRelatedHashtags>
+                        </items>
+                    </well-multifield-related-hashtags>
+                </items>
+            </col2>
+        </items>
+    </content>
+</jcr:root>

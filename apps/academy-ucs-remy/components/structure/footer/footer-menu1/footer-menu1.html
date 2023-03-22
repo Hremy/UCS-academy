@@ -1,0 +1,15 @@
+<div data-sly-test="${!resource['menus/jcr:primaryType']}" class="plcholder-white">
+  ~Footer First Menu~
+</div>
+
+<div class="footer__mainLink" data-sly-list.multifield="${resource.getChildren}">
+  <sly data-sly-test="${multifield.name == 'menus'}">
+    <sly data-sly-list.item="${multifield.getChildren}">
+        
+      <a data-sly-test="${item.valueMap.enabler == 'true'}"
+         href="${item.valueMap.path}.html" target="${item.valueMap.selector}" class="footer__link">${item.valueMap.name}</a>
+    </sly>
+  </sly>
+</div>
+
+      
