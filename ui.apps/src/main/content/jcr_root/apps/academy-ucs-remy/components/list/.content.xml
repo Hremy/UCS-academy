@@ -3,5 +3,5 @@
     jcr:primaryType="cq:Component"
     jcr:title="List"
     sling:resourceSuperType="core/wcm/components/list/v3/list"
-    teaserDelegate="academy-ucs-remy/components/teaser"
-    componentGroup="Academy UCS Remy - Content"/>
+    componentGroup="Academy UCS Remy - Content"
+    teaserDelegate="academy-ucs-remy/components/teaser"/>

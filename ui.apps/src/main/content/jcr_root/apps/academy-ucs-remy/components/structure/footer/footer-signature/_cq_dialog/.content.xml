@@ -16,18 +16,22 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Trademark"
                         name="./trademark"/>
-
-                        <target jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                            fieldLabel="Open:"
-                                            name="./target">
-                                                <items jcr:primaryType="nt:unstructured">
-                                                       <option1 jcr:primaryType="nt:unstructured" value="_blank" text="open in new tab"></option1>
-                                                     <option2 jcr:primaryType="nt:unstructured" value="_self" text="open in current tab"></option2>  
-                                                 </items>
-                                       </target>
-
-                                       
+                    <target
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Open:"
+                        name="./target">
+                        <items jcr:primaryType="nt:unstructured">
+                            <option1
+                                jcr:primaryType="nt:unstructured"
+                                text="open in new tab"
+                                value="_blank"/>
+                            <option2
+                                jcr:primaryType="nt:unstructured"
+                                text="open in current tab"
+                                value="_self"/>
+                        </items>
+                    </target>
                 </items>
             </column>
         </items>
