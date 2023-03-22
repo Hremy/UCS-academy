@@ -21,15 +21,15 @@
                             <close
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                emptyText="Enter Close Button Title"
+                                emptyText=""
                                 fieldLabel="Close Button"
                                 name="./relatedArticlesButtonClose"/>
                             <max
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                emptyText="Select Max Orders per Tag"
+                                emptyText=""
                                 fieldLabel="Max Article"
-                                name="./relatedArticlesMax">
+                                name="./max">
                                 <items jcr:primaryType="nt:unstructured">
                                     <max1
                                         jcr:primaryType="nt:unstructured"
@@ -116,18 +116,18 @@
                             <order
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/select"
-                                emptyText="Select Order"
-                                fieldLabel="Article Order"
-                                name="./relatedArticlesOrder">
+                                emptyText=""
+                                fieldLabel="Sort by date"
+                                name="./order">
                                 <items jcr:primaryType="nt:unstructured">
                                     <dateDescending
                                         jcr:primaryType="nt:unstructured"
-                                        text="Date Descending"
-                                        value="date_descending"/>
+                                        text="RECENT TO OLD"
+                                        value="DESC"/>
                                     <dateAscending
                                         jcr:primaryType="nt:unstructured"
-                                        text="Date Ascending"
-                                        value="date_ascending"/>
+                                        text="OLD TO RECENT"
+                                        value="ASC"/>
                                 </items>
                             </order>
                         </items>

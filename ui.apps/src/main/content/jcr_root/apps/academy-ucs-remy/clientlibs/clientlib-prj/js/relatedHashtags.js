@@ -152,8 +152,10 @@ $(document).ready(function () {
         addBg($(window).width());
       }
       $(".relatedHashtag__result .swiper-slide").remove();
-  
-      var urlHashTag = "/bin/remy-ucs-related-articles?hashtag=" + hashtag;
+
+      var path = document.querySelector(".relatedHashtag").getAttribute("data-magazine-path");
+
+      var urlHashTag = "/bin/remy-ucs-related-articles?hashtag="+hashtag+"&path="+path;
   
       $.ajax({
         url: urlHashTag,
