@@ -118,7 +118,7 @@ $(document).ready(function () {
               ".relatedHashtag__result .swiper-wrapper .card"
             ).last();
   
-            lastCard.attr("href", cardData.link);
+            lastCard.attr("href", cardData.path+".html");
             lastCard.attr("target", cardData.target);
   
             lastCard
