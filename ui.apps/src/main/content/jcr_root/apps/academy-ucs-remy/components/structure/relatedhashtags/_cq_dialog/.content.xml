@@ -18,13 +18,7 @@
                         sling:resourceType="granite/ui/components/foundation/container"
                         name="./relatedArticles">
                         <items jcr:primaryType="nt:unstructured">
-                            <close
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                                emptyText=""
-                                fieldLabel="Close Button"
-                                name="./relatedArticlesButtonClose"/>
-                            <max
+                        <max
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/select"
                                 emptyText=""
@@ -113,6 +107,8 @@
                                         value="20"/>
                                 </items>
                             </max>
+                            
+                            
                             <order
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="granite/ui/components/coral/foundation/form/select"
@@ -128,8 +124,22 @@
                                         jcr:primaryType="nt:unstructured"
                                         text="OLD TO RECENT"
                                         value="ASC"/>
+
                                 </items>
                             </order>
+
+                            <close
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                emptyText=""
+                                fieldLabel="Close Button"
+                                name="./relatedArticlesButtonClose"/>
+                            <results
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                emptyText=""
+                                fieldLabel="Results Label"
+                                name="./results"/>
                         </items>
                     </container>
                 </items>
@@ -155,13 +165,13 @@
                                 <field
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="granite/ui/components/coral/foundation/container"
-                                    emptyText="Related HashTags"
+                                    emptyText=""
                                     name="./linksMapRelatedHashtags">
                                     <items jcr:primaryType="nt:unstructured">
                                         <hashtag
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="cq/gui/components/coral/common/form/tagfield"
-                                            emptyText="Select Tag"
+                                            emptyText=""
                                             fieldLabel="Related HashTag"
                                             multiple="{Boolean}false"
                                             name="./hashtag"
@@ -174,6 +184,246 @@
                     </well-multifield-related-hashtags>
                 </items>
             </col2>
+            <col3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="DISPLAY"
+                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                <items jcr:primaryType="nt:unstructured">
+                    <well-multifield-related-articles
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                        fieldLabel="Customize Articles">
+                        <items jcr:primaryType="nt:unstructured">
+                            <linksMapRelatedArticles
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Customize Articles"
+                                name="linksMapRelatedArticles"
+                                required="{Boolean}false">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./linksMapRelatedArticles">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <article
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Article"
+                                            multiple="{Boolean}false"
+                                            required="{Boolean}true"
+                                            name="./article"
+                                            rootPath="/content/academy-ucs-remy/us/en/magazine"/>
+                                    </items>
+                                </field>
+                            </linksMapRelatedArticles>
+                        </items>
+                    </well-multifield-related-articles>
+                </items>
+            </col3>
+            <col4
+                    jcr:primaryType="nt:unstructured" 
+                    jcr:title="CONFIGURATION" 
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"> 
+                <items jcr:primaryType="nt:unstructured"> 
+                    <container 
+                            jcr:primaryType="nt:unstructured" 
+                            jcr:title="ARTICLES" 
+                            sling:resourceType="granite/ui/components/foundation/container" 
+                            name="./relatedArticles"> 
+                        <items jcr:primaryType="nt:unstructured"> 
+                            <import 
+                                    jcr:primaryType="nt:unstructured" 
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select" 
+                                    fieldLabel="Import From" 
+                                    emptyText="" 
+                                    multiple="{Boolean}true" 
+                                    name="./articlesImportFrom"> 
+                                <items jcr:primaryType="nt:unstructured"> 
+                                    <csv jcr:primaryType="nt:unstructured" text="CSV" value="csv"/> 
+                                    
+                                </items> 
+                            </import> 
+                            <startFrom 
+                                    jcr:primaryType="nt:unstructured" 
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/numberfield" 
+                                    fieldLabel="Partial import START" 
+                                    emptyText="" 
+                                    name="./articlesStartFrom"/> 
+                            <endAt 
+                                    jcr:primaryType="nt:unstructured" 
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/numberfield" 
+                                    fieldLabel="Partial import END" 
+                                    emptyText="" 
+                                    name="./articlesEndAt"/> 
+                            <onInsertError 
+                                    jcr:primaryType="nt:unstructured" 
+                                    sling:resourceType="granite/ui/components/foundation/form/checkbox" 
+                                    text="Do not abort on INSERT error?" 
+                                    value="{Boolean}true" 
+                                    uncheckedValue="{Boolean}false" 
+                                    name="./articlesContinueOnError"/> 
+                            <emptyRow 
+                                    jcr:primaryType="nt:unstructured" 
+                                    sling:resourceType="granite/ui/components/foundation/form/checkbox" 
+                                    text="Do not import empty rows?" 
+                                    value="{Boolean}true" 
+                                    uncheckedValue="{Boolean}false" 
+                                    name="./articlesSkipEmptyRow"/> 
+                            <intervalMin 
+                                    jcr:primaryType="nt:unstructured" 
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select" 
+                                    fieldLabel="Job Interval (Min)" 
+                                    emptyText="" 
+                                    name="./articlesIntervalMin"> 
+                                <items jcr:primaryType="nt:unstructured"> 
+                                    <min1 jcr:primaryType="nt:unstructured" text="1 Min" value="1"/> 
+                                    <min2 jcr:primaryType="nt:unstructured" text="2 Min" value="2"/> 
+                                    <min3 jcr:primaryType="nt:unstructured" text="3 Min" value="3"/> 
+                                    <min4 jcr:primaryType="nt:unstructured" text="4 Min" value="4"/> 
+                                    <min5 jcr:primaryType="nt:unstructured" text="5 Min" value="5"/> 
+                                    <min6 jcr:primaryType="nt:unstructured" text="6 Min" value="6"/> 
+                                    <min7 jcr:primaryType="nt:unstructured" text="7 Min" value="7"/> 
+                                    <min8 jcr:primaryType="nt:unstructured" text="8 Min" value="8"/> 
+                                    <min9 jcr:primaryType="nt:unstructured" text="9 Min" value="9"/> 
+                                    <min10 jcr:primaryType="nt:unstructured" text="10 Min" value="10"/> 
+                                    <min11 jcr:primaryType="nt:unstructured" text="11 Min" value="11"/> 
+                                    <min12 jcr:primaryType="nt:unstructured" text="12 Min" value="12"/> 
+                                    <min13 jcr:primaryType="nt:unstructured" text="13 Min" value="13"/> 
+                                    <min14 jcr:primaryType="nt:unstructured" text="14 Min" value="14"/> 
+                                    <min15 jcr:primaryType="nt:unstructured" text="15 Min" value="15"/> 
+                                    <min16 jcr:primaryType="nt:unstructured" text="16 Min" value="16"/> 
+                                    <min17 jcr:primaryType="nt:unstructured" text="17 Min" value="17"/> 
+                                    <min18 jcr:primaryType="nt:unstructured" text="18 Min" value="18"/> 
+                                    <min19 jcr:primaryType="nt:unstructured" text="19 Min" value="19"/> 
+                                    <min20 jcr:primaryType="nt:unstructured" text="20 Min" value="20"/> 
+                                    <min21 jcr:primaryType="nt:unstructured" text="21 Min" value="21"/> 
+                                    <min22 jcr:primaryType="nt:unstructured" text="22 Min" value="22"/> 
+                                    <min23 jcr:primaryType="nt:unstructured" text="23 Min" value="23"/> 
+                                    <min24 jcr:primaryType="nt:unstructured" text="24 Min" value="24"/> 
+                                    <min25 jcr:primaryType="nt:unstructured" text="25 Min" value="25"/> 
+                                    <min26 jcr:primaryType="nt:unstructured" text="26 Min" value="26"/> 
+                                    <min27 jcr:primaryType="nt:unstructured" text="27 Min" value="27"/> 
+                                    <min28 jcr:primaryType="nt:unstructured" text="28 Min" value="28"/> 
+                                    <min29 jcr:primaryType="nt:unstructured" text="29 Min" value="29"/> 
+                                    <min30 jcr:primaryType="nt:unstructured" text="30 Min" value="30"/> 
+                                    <min31 jcr:primaryType="nt:unstructured" text="31 Min" value="31"/> 
+                                    <min32 jcr:primaryType="nt:unstructured" text="32 Min" value="32"/> 
+                                    <min33 jcr:primaryType="nt:unstructured" text="33 Min" value="33"/> 
+                                    <min34 jcr:primaryType="nt:unstructured" text="34 Min" value="34"/> 
+                                    <min35 jcr:primaryType="nt:unstructured" text="35 Min" value="35"/> 
+                                    <min36 jcr:primaryType="nt:unstructured" text="36 Min" value="36"/> 
+                                    <min37 jcr:primaryType="nt:unstructured" text="37 Min" value="37"/> 
+                                    <min38 jcr:primaryType="nt:unstructured" text="38 Min" value="38"/> 
+                                    <min39 jcr:primaryType="nt:unstructured" text="39 Min" value="39"/> 
+                                    <min40 jcr:primaryType="nt:unstructured" text="40 Min" value="40"/> 
+                                    <min41 jcr:primaryType="nt:unstructured" text="41 Min" value="41"/> 
+                                    <min42 jcr:primaryType="nt:unstructured" text="42 Min" value="42"/> 
+                                    <min43 jcr:primaryType="nt:unstructured" text="43 Min" value="43"/> 
+                                    <min44 jcr:primaryType="nt:unstructured" text="44 Min" value="44"/> 
+                                    <min45 jcr:primaryType="nt:unstructured" text="45 Min" value="45"/> 
+                                    <min46 jcr:primaryType="nt:unstructured" text="46 Min" value="46"/> 
+                                    <min47 jcr:primaryType="nt:unstructured" text="47 Min" value="47"/> 
+                                    <min48 jcr:primaryType="nt:unstructured" text="48 Min" value="48"/> 
+                                    <min49 jcr:primaryType="nt:unstructured" text="49 Min" value="49"/> 
+                                    <min50 jcr:primaryType="nt:unstructured" text="50 Min" value="50"/> 
+                                    <min51 jcr:primaryType="nt:unstructured" text="51 Min" value="51"/> 
+                                    <min52 jcr:primaryType="nt:unstructured" text="52 Min" value="52"/> 
+                                    <min53 jcr:primaryType="nt:unstructured" text="53 Min" value="53"/> 
+                                    <min54 jcr:primaryType="nt:unstructured" text="54 Min" value="54"/> 
+                                    <min55 jcr:primaryType="nt:unstructured" text="55 Min" value="55"/> 
+                                    <min56 jcr:primaryType="nt:unstructured" text="56 Min" value="56"/> 
+                                    <min57 jcr:primaryType="nt:unstructured" text="57 Min" value="57"/> 
+                                    <min58 jcr:primaryType="nt:unstructured" text="58 Min" value="58"/> 
+                                    <min59 jcr:primaryType="nt:unstructured" text="59 Min" value="59"/> 
+                                    <min60 jcr:primaryType="nt:unstructured" text="60 Min" value="60"/> 
+                                </items> 
+                            </intervalMin> 
+                            <intervalHour 
+                                    jcr:primaryType="nt:unstructured" 
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select" 
+                                    fieldLabel="Job Interval (Hour)" 
+                                    emptyText="" 
+                                    name="./articlesIntervalHour"> 
+                                <items jcr:primaryType="nt:unstructured"> 
+                                    <hour1 jcr:primaryType="nt:unstructured" text="1 Hour" value="1"/> 
+                                    <hour2 jcr:primaryType="nt:unstructured" text="2 Hour" value="2"/> 
+                                    <hour3 jcr:primaryType="nt:unstructured" text="3 Hour" value="3"/> 
+                                    <hour4 jcr:primaryType="nt:unstructured" text="4 Hour" value="4"/> 
+                                    <hour5 jcr:primaryType="nt:unstructured" text="5 Hour" value="5"/> 
+                                    <hour6 jcr:primaryType="nt:unstructured" text="6 Hour" value="6"/> 
+                                    <hour7 jcr:primaryType="nt:unstructured" text="7 Hour" value="7"/> 
+                                    <hour8 jcr:primaryType="nt:unstructured" text="8 Hour" value="8"/> 
+                                    <hour9 jcr:primaryType="nt:unstructured" text="9 Hour" value="9"/> 
+                                    <hour10 jcr:primaryType="nt:unstructured" text="10 Hour" value="10"/> 
+                                    <hour11 jcr:primaryType="nt:unstructured" text="11 Hour" value="11"/> 
+                                    <hour12 jcr:primaryType="nt:unstructured" text="12 Hour" value="12"/> 
+                                    <hour13 jcr:primaryType="nt:unstructured" text="13 Hour" value="13"/> 
+                                    <hour14 jcr:primaryType="nt:unstructured" text="14 Hour" value="14"/> 
+                                    <hour15 jcr:primaryType="nt:unstructured" text="15 Hour" value="15"/> 
+                                    <hour16 jcr:primaryType="nt:unstructured" text="16 Hour" value="16"/> 
+                                    <hour17 jcr:primaryType="nt:unstructured" text="17 Hour" value="17"/> 
+                                    <hour18 jcr:primaryType="nt:unstructured" text="18 Hour" value="18"/> 
+                                    <hour19 jcr:primaryType="nt:unstructured" text="19 Hour" value="19"/> 
+                                    <hour20 jcr:primaryType="nt:unstructured" text="20 Hour" value="20"/> 
+                                    <hour21 jcr:primaryType="nt:unstructured" text="21 Hour" value="21"/> 
+                                    <hour22 jcr:primaryType="nt:unstructured" text="22 Hour" value="22"/> 
+                                    <hour23 jcr:primaryType="nt:unstructured" text="23 Hour" value="23"/> 
+                                    <hour24 jcr:primaryType="nt:unstructured" text="24 Hour" value="24"/> 
+                                </items> 
+                            </intervalHour> 
+                            <columns 
+                                    jcr:primaryType="nt:unstructured" 
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/select" 
+                                    fieldLabel="Import Columns" 
+                                    emptyText="" 
+                                    multiple="{Boolean}true" 
+                                    name="./articlesImportColumns"> 
+                                <items jcr:primaryType="nt:unstructured"> 
+                                    <column1 jcr:primaryType="nt:unstructured" text="TITLE" value="1"/> 
+                                    <column2 jcr:primaryType="nt:unstructured" text="TEXT" value="2"/> 
+                                    <column3 jcr:primaryType="nt:unstructured" text="DESCRIPTION" value="3"/> 
+                                    <column4 jcr:primaryType="nt:unstructured" text="TAGS" value="4"/> 
+                                    <column5 jcr:primaryType="nt:unstructured" text="IMAGE" value="5"/> 
+                                    <column6 jcr:primaryType="nt:unstructured" text="DATE" value="6"/> 
+                                    <column7 jcr:primaryType="nt:unstructured" text="TARGET" value="7"/> 
+                                </items> 
+                            </columns> 
+                        </items> 
+                    </container> 
+                </items> 
+            </col4> 
+            <col5 
+                    jcr:primaryType="nt:unstructured" 
+                    jcr:title="IMPORT" 
+                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"> 
+                <items jcr:primaryType="nt:unstructured"> 
+                    <container 
+                            jcr:primaryType="nt:unstructured" 
+                            jcr:title="IMPORT" 
+                            sling:resourceType="granite/ui/components/foundation/container" 
+                            name="./relatedArticles"> 
+                        <items jcr:primaryType="nt:unstructured"> 
+                            <csvFileArticle 
+                                    jcr:primaryType="nt:unstructured" 
+                                    sling:resourceType="granite/ui/components/foundation/form/fileupload" 
+                                    allowUpload="{Boolean}false" 
+                                    autoStart="{Boolean}false" 
+                                    class="cq-droptarget" 
+                                    fieldLabel="Import Article CSV" 
+                                    fileNameParameter="./csvFileArticlePar" 
+                                    fileReferenceParameter="./csvFileArticleRef" 
+                                    mimeTypes="[csv, text/csv]" 
+                                    multiple="{Boolean}false" 
+                                    name="./csvFileArticle" 
+                                    title="Article CSV" 
+                                    uploadUrl="${suffix.path}" 
+                                    useHTML5="{Boolean}true"/> 
+                            
+                        </items> 
+                    </container> 
+                </items> 
+            </col5>
         </items>
     </content>
 </jcr:root>

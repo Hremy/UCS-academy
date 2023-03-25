@@ -25,12 +25,12 @@ $(document).ready(function () {
         windowRelatedHash = $(window).width();
         if ($(window).width() < 1025 && (!$(".result__cards .swiper-wrapper").hasClass("mobile"))) {
           $(".result__cards .swiper-wrapper").addClass("mobile").removeClass("desktop");
-          setSwiperStructure(dataHashtag);
+          setSwiperStructure("", dataHashtag);
           cardsSwiper()
         }
         if ($(window).width() >= 1025 && (!$(".result__cards .swiper-wrapper").hasClass("desktop"))) {
           $(".result__cards .swiper-wrapper").addClass("desktop").removeClass("mobile");
-          setSwiperStructure(dataHashtag);
+          setSwiperStructure("", dataHashtag);
           cardsSwiper()
         }
   
@@ -68,7 +68,7 @@ $(document).ready(function () {
       }
     }
   
-    function setSwiperStructure(data) {
+    function setSwiperStructure(isLazy, data) {
       $(".relatedHashtag__result .swiper-slide").remove();
       if (data) {
         $(".result__number .number").text(data.length);
@@ -102,7 +102,7 @@ $(document).ready(function () {
           if (counter <= numberOfSlider) {
             if (counter == 1) {
               $(".relatedHashtag__result .swiper-wrapper").append(
-                "<div class='swiper-slide'><div class='cards'></div></div>"
+                `<div class='swiper-slide'><div class='cards ${isLazy}'></div></div>`
               );
             }
             $(".relatedHashtag__result .swiper-wrapper")
@@ -118,21 +118,21 @@ $(document).ready(function () {
               ".relatedHashtag__result .swiper-wrapper .card"
             ).last();
   
-            lastCard.attr("href", cardData.path+".html");
-            lastCard.attr("target", cardData.target);
+            lastCard.attr("href", (cardData.path || '#') + ".html");
+            lastCard.attr("target", cardData.target || '');
   
             lastCard
               .find(".card__bg")
-              .attr("data-bg", cardData.image)
-              .attr("data-bg-mobile", cardData.image);
+              .attr("data-bg", cardData.image || '')
+              .attr("data-bg-mobile", cardData.image || '');
   
             addBg($(window).width());
   
-            lastCard.find(".card__hashtag").text("#"+cardData.hashtag);
+            lastCard.find(".card__hashtag").text((cardData.hashtag ? "#"+cardData.hashtag : ''));
   
-            lastCard.find(".card__date").text(cardData.date);
+            lastCard.find(".card__date").text(cardData.date || '');
   
-            lastCard.find(".card__desc").text(cardData.description);
+            lastCard.find(".card__desc").text(cardData.description || '');
   
             counter = counter + 1;
             if (counter > numberOfSlider) {
@@ -157,17 +157,25 @@ $(document).ready(function () {
 
       var urlHashTag = "/bin/remy-ucs-related-articles?hashtag="+hashtag+"&path="+path;
   
-      $.ajax({
-        url: urlHashTag,
-        type: "GET",
-        success: function (data) {
-          dataHashtag = JSON.parse(data["data"]);
-        },
-        complete: function () {
-          setSwiperStructure(dataHashtag);
-          cardsSwiper();
-        },
-      });
-  
+      // setSwiperStructure("lazy-load", ['{}','{}','{}','{}']);
+      // cardsSwiper();
+      // $(".result__number .number").text("-");
+
+      setTimeout(function() {
+
+        $.ajax({
+          url: urlHashTag,
+          type: "GET",
+          success: function (data) {
+            dataHashtag = JSON.parse(data["data"]);
+          },
+          complete: function () {
+            setSwiperStructure("", dataHashtag);
+            cardsSwiper();
+          },
+        });
+
+      }, 0);
+
     }
   });

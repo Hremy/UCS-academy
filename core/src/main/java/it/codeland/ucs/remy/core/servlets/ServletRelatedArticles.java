@@ -4,7 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Iterator;
 import javax.jcr.Node;
 import javax.jcr.NodeIterator;
 import javax.jcr.Session;
@@ -62,7 +64,7 @@ public class ServletRelatedArticles extends SlingSafeMethodsServlet {
       query.append(order);
   
       ResourceResolver resourceResolver = request.getResourceResolver();
-      Session session = (Session)resourceResolver.adaptTo(Session.class);
+      Session session = resourceResolver.adaptTo(Session.class);
 
       QueryManager queryManager = session.getWorkspace().getQueryManager();
       Query sql2 = queryManager.createQuery(query.toString(), "JCR-SQL2");
@@ -73,14 +75,23 @@ public class ServletRelatedArticles extends SlingSafeMethodsServlet {
       
       Gson gson = new Gson();
       JsonArray jsonArray = new JsonArray();
-      
+
+      ArrayList<Article> listArticles1 = new ArrayList<>();
+
       while (nodeIterator.hasNext()) {
         Node nodeArticle = nodeIterator.nextNode();
         Article article = getArticle(resourceResolver, nodeArticle);
-        if (article != null)
-          jsonArray.add(gson.toJson(article)); 
-      } 
-    
+        if (article != null) {
+          listArticles1.add(article);
+        }
+      }
+
+      ArrayList<Article> listArticlesNew = getCustomizedArticles(resourceResolver, listArticles1, path, hashtag, limit);
+
+      for(Article article : listArticlesNew) {
+        jsonArray.add(gson.toJson(article));
+      }
+
       jsonResponse.put("data", jsonArray);
 
     } catch (Exception e) {
@@ -111,9 +122,9 @@ public class ServletRelatedArticles extends SlingSafeMethodsServlet {
         date = (new SimpleDateFormat("EEEE dd MMM yyyy")).format(calendar.getTime());
       }
 
-      String tags = "";
+      String tags = "[";
       String hashtag = "";
-      if (cqTags != null && cqTags.length > 0)
+      if (cqTags != null && cqTags.length > 0) {
         for (int i = 0; i < cqTags.length; i++) {
           String cqTag = cqTags[i].getString();
           cqTag = cqTag.replace(":", "/");
@@ -126,6 +137,8 @@ public class ServletRelatedArticles extends SlingSafeMethodsServlet {
             tags = tags + ((i > 0) ? ", " : "") + tag;
           } 
         }
+      }
+      tags += "]";
 
       article = new Article(title, description, image, date, hashtag, tags, path);
       
@@ -134,6 +147,33 @@ public class ServletRelatedArticles extends SlingSafeMethodsServlet {
     } 
     
     return article;
+  }
+
+  public ArrayList<Article> getCustomizedArticles(ResourceResolver resourceResolver, ArrayList<Article> listArticles1, String path, String hashtag, int limit) {
+    ArrayList<Article> listArticles = new ArrayList<>();
+    Resource resource = resourceResolver.getResource(path + "/jcr:content/parsys/relatedhashtags/linksMapRelatedArticles");
+    if(resource != null) {
+      for (Iterator<Resource> iterator = resource.listChildren(); iterator.hasNext(); ) {
+        Resource resourceItem = iterator.next();
+        String articlePath = resourceItem.getValueMap().get("article", "");
+        if(articlePath.length() != 0) {
+          Resource resourceArticle = resourceResolver.getResource(articlePath);
+          if(resourceArticle != null) {
+            Node nodeArticle = resourceArticle.adaptTo(Node.class);
+            Article article = getArticle(resourceResolver, nodeArticle);
+            if(article != null && (""+article.getTags()).toLowerCase().contains((""+hashtag).toLowerCase())) {
+              listArticles.add(article);
+            }
+          }
+        }
+      }
+    }
+    for(Article article : listArticles1) {
+      if(listArticles.size() < limit && !listArticles.contains(article)) {
+        listArticles.add(article);
+      }
+    }
+    return listArticles;
   }
 
   public ValueMap getConfig(ResourceResolver resourceResolver, String path) {
