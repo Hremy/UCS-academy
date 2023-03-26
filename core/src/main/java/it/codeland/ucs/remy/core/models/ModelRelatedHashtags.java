@@ -35,31 +35,41 @@ public class ModelRelatedHashtags {
   protected void init() {}
   
   public List<Map<String, String>> getRelatedHashtags() {
+
     ArrayList<Map<String, String>> listMapRelatedHashtag = new ArrayList<>();
+
     try {
+
       Resource resourceField = this.resource.getChild("linksMapRelatedHashtags");
+
       if (resourceField != null)
+
         for (Resource itemHashtag : resourceField.getChildren()) {
+
           Map<String, String> mapHashtag = new HashMap<>();
-          String tag = (String)itemHashtag.getValueMap().get("hashtag", String.class);
+          String tag = itemHashtag.getValueMap().get("hashtag", String.class);
+
           if (tag != null) {
             tag = tag.replace(":", "/");
             tag = "/content/cq:tags/" + tag;
-            LOG.info("\n hashtag {} ", tag);
             Resource resourceTag = this.resourceResolver.getResource(tag);
-            LOG.info("\n resourceTag {} ", resourceTag);
+
             if (resourceTag != null) {
-              String hashtag = (String)resourceTag.getValueMap().get("jcr:title", "");
+              String hashtag = resourceTag.getValueMap().get("jcr:title", "");
               mapHashtag.put("tag", tag);
               mapHashtag.put("hashtag", hashtag);
               listMapRelatedHashtag.add(mapHashtag);
-              LOG.info("\n mapHashtag {} ", mapHashtag);
-            } 
-          } 
-        }  
+            }
+
+          }
+
+        }
+
     } catch (Exception e) {
       LOG.error("\n ERROR while getting Related Hashtag Items {} ", e.toString());
-    } 
+    }
+
     return listMapRelatedHashtag;
   }
+
 }

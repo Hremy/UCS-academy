@@ -13,7 +13,7 @@ public class ResolverUtil {
 
     public static ResourceResolver newResolver(ResourceResolverFactory resourceResolverFactory ) throws LoginException {
         final Map<String, Object> paramMap = new HashMap<String, Object>();
-        paramMap.put( ResourceResolverFactory.SUBSERVICE, "alain-ucs" );
+        paramMap.put( ResourceResolverFactory.SUBSERVICE, "remy-ucs" );
         ResourceResolver resolver = resourceResolverFactory.getServiceResourceResolver(paramMap);
         return resolver;
     }

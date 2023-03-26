@@ -27,9 +27,14 @@ public class OtherPage {
     protected void init() {}
 
     public Page getHomePage() {
-        PageManager pageManager = (PageManager)this.resourceResolver.adaptTo(PageManager.class);
-        Resource homeResource = this.resourceResolver.getResource("/content/academy-ucs-remy/us/en");
+        return getHomePage(resourceResolver);
+    }
+
+    public static Page getHomePage(ResourceResolver resourceResolver) {
+        PageManager pageManager = resourceResolver.adaptTo(PageManager.class);
+        Resource homeResource = resourceResolver.getResource("/content/academy-ucs-remy/us/en");
         Page homePage = pageManager.getContainingPage(homeResource);
         return homePage;
     }
+
 }

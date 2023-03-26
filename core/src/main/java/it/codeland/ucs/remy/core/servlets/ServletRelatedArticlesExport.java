@@ -1,12 +1,14 @@
 package it.codeland.ucs.remy.core.servlets;
 
 import com.day.cq.wcm.api.Page;
-import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import it.codeland.ucs.remy.core.models.OtherPage;
 import it.codeland.ucs.remy.core.utils.Article;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
+import org.apache.sling.api.resource.ValueMap;
 import org.apache.sling.api.servlets.HttpConstants;
 import org.apache.sling.api.servlets.SlingSafeMethodsServlet;
 import org.apache.sling.servlets.annotations.SlingServletResourceTypes;
@@ -41,8 +43,42 @@ public class ServletRelatedArticlesExport extends SlingSafeMethodsServlet {
 
     Article article = ServletRelatedArticles.getArticle(resource.getResourceResolver(), nodeArticle);
 
+    Page homePage = OtherPage.getHomePage(resourceResolver);
+
+    ValueMap valueMapHashTag = resourceResolver.getResource(homePage.getPath() + "/jcr:content/parsys/relatedhashtags").getValueMap();
+
+    JsonObject jsonResponse = new JsonObject();
+
+    if(valueMapHashTag.get("title", false)) {
+      jsonResponse.addProperty("title", article.getTitle());
+    }
+
+    if(valueMapHashTag.get("description", false)) {
+      jsonResponse.addProperty("description", article.getDescription());
+    }
+
+    if(valueMapHashTag.get("image", false)) {
+      jsonResponse.addProperty("image", article.getImage());
+    }
+
+    if(valueMapHashTag.get("date", false)) {
+      jsonResponse.addProperty("date", article.getDate());
+    }
+
+    if(valueMapHashTag.get("tags", false)) {
+      jsonResponse.addProperty("tags", article.getTags());
+    }
+
+    if(valueMapHashTag.get("path", false)) {
+      jsonResponse.addProperty("path", article.getPath());
+    }
+
+    if(valueMapHashTag.get("link", false)) {
+      jsonResponse.addProperty("link", article.getLink());
+    }
+
     response.setContentType("application/json");
-    response.getWriter().write(new Gson().toJson(article));
+    response.getWriter().write(jsonResponse.toString());
   }
 
 }
