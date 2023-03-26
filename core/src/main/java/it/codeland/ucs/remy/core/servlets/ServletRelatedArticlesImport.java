@@ -172,14 +172,14 @@ public class ServletRelatedArticlesImport extends SlingSafeMethodsServlet {
                 if (articleExist) {
                     if (articleUpdated) {
                         skipped++;
-                        out += "\n" + (j + 1) + ". Article Existed (skipped) : " + hashMapArticle.get("name");
+                        out += "\n" + (j + 1) + ". Exist (skipped) : " + hashMapArticle.get("name");
                     } else {
                         skipped++;
-                        out += "\n" + (j + 1) + ". Article Existed (skipped) : " + hashMapArticle.get("name");
+                        out += "\n" + (j + 1) + ". Exist (skipped) : " + hashMapArticle.get("name");
                     }
                 } else {
                     imported++;
-                    out += "\n" + (j + 1) + ". Article Imported : " + hashMapArticle.get("name");
+                    out += "\n" + (j + 1) + ". Imported : " + hashMapArticle.get("name");
                 }
 
                 nodeRelatedHashTags.setProperty("importProgress", (int) progress);
