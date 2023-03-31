@@ -1,5 +1,6 @@
 package it.codeland.ucs.remy.core.schedulers;
 
+import it.codeland.ucs.remy.core.utils.ResolverUtil;
 import org.apache.commons.codec.binary.Base64;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -16,21 +17,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
 
-@Designate(ocd= RemyJobRelatedArticlesImport.SlingSchedulerOSGIConfiguration.class)
+@Designate(ocd= UCSCronJob.SlingSchedulerOSGIConfiguration.class)
 @Component(service = Runnable.class,
         property = {
                 "expression=*/5 * * * * ?"
         })
-public class RemyJobRelatedArticlesImport implements Runnable {
+public class UCSCronJob implements Runnable {
 
     @ObjectClassDefinition(
-            name="RemyJobRelatedArticlesImport",
+            name="UCSCronJob",
             description = "Remy Job Scheduled Task for cron-job like task with properties"
     )
     public static @interface SlingSchedulerOSGIConfiguration {
@@ -56,11 +58,11 @@ public class RemyJobRelatedArticlesImport implements Runnable {
         public boolean enabled() default true;
 
         @AttributeDefinition(
-                name = "A parameter",
+                name = "Default Duration",
                 description = "Can be configured in /system/console/configMgr",
                 type = AttributeType.STRING
         )
-        String myParameter() default "Parameter Value";
+        String myParameter() default "";
     }
 
     private final Logger LOG = LoggerFactory.getLogger(getClass());
@@ -83,25 +85,27 @@ public class RemyJobRelatedArticlesImport implements Runnable {
 
         try {
 
-            URL url = new URL("http://localhost:4502/bin/remy-ucs-related-articles-import");
-            HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-            httpURLConnection.setRequestMethod("GET");
-            httpURLConnection.setRequestProperty("Authorization", "Basic " + new String(Base64.encodeBase64(("admin" + ":" + "admin").getBytes(StandardCharsets.UTF_8))));
-            httpURLConnection.connect();
+            ResourceResolver resolverUser = ResolverUtil.newResolver(resolverFactory);
 
-            BufferedReader br = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream()));
+            InputStream inputStream = executeImporter(resolverUser);
+
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
             StringBuilder responseContent = new StringBuilder();
             String content;
             while ((content = br.readLine()) != null) {
                 responseContent.append(content);
             }
 
-            String result = responseContent.toString().replace("<br>", "\n");
+            String result = responseContent.toString()
+                    .replace("<br>", "\n")
+                    .replace("#", "\n#")
+                    .replace(">>", "\n>>")
+                    ;
 
             LOG.info("\nRemy-JobScheduledTask: SUCCESS : Importing Articles " +" --> "+ result +"\n\n");
 
         } catch (Exception e) {
-            LOG.info("\nRemy-JobScheduledTask: FAILED : Importing Articles "+ e +"\n\n");
+            LOG.error("\nRemy-JobScheduledTask: FAILED : Importing Articles "+ e +"\n\n");
         }
 
         LOG.info("\nRemy-JobScheduledTask: STOPPED : Importing Articles \n\n");
@@ -111,6 +115,17 @@ public class RemyJobRelatedArticlesImport implements Runnable {
     @Activate
     protected void activate(final SlingSchedulerOSGIConfiguration slingSchedulerOSGIConfiguration) {
         myParameter = slingSchedulerOSGIConfiguration.myParameter();
+    }
+
+    public InputStream executeImporter(ResourceResolver resourceResolver) throws Exception {
+
+        URL url = new URL("http://localhost:4502/bin/remy-ucs-related-articles-import");
+        HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+        httpURLConnection.setRequestMethod("GET");
+        httpURLConnection.setRequestProperty("Authorization", "Basic " + new String(Base64.encodeBase64(("admin" + ":" + "admin").getBytes(StandardCharsets.UTF_8))));
+        httpURLConnection.connect();
+
+        return httpURLConnection.getInputStream();
     }
 
 }

@@ -16,8 +16,7 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Model(adaptables = {Resource.class}, resourceType = {"academy-ucs-remy/components/structure/articlepage"}, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-
+@Model(adaptables = Resource.class)
 public class ModelRelatedHashtags {
   private static final Logger LOG = LoggerFactory.getLogger(ModelRelatedHashtags.class);
   

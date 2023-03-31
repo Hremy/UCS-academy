@@ -4,6 +4,7 @@ import com.day.cq.dam.api.Asset;
 import com.day.cq.dam.api.Rendition;
 import com.day.cq.wcm.api.Page;
 import com.day.cq.wcm.api.PageManager;
+import org.apache.http.util.TextUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.request.RequestParameter;
@@ -105,7 +106,7 @@ public class ServletRelatedArticlesImport extends SlingSafeMethodsServlet {
                 listArticles.addAll(importCSV(csvRelatedArticlesImportFile, fileCSV, resource, resourceResolver, LOG));
             }catch (Exception e) {
                 LOG.info("\nRemyJobScheduledTask: ERROR while importing Related Articles CSV - CSV {} ", e.toString());
-                out += "\nError: Articles CSV - CSV : "+ e;
+                // out += "\nError: Articles CSV - CSV : "+ e;
             }
 
             for(int j=0; j<listArticles.size(); j++) {
@@ -117,10 +118,8 @@ public class ServletRelatedArticlesImport extends SlingSafeMethodsServlet {
                     tags = tags.replace("]", "");
                     tags = tags.replace(" ", "");
                     for(String tag : tags.split(",")) {
-                        tag = tag.replace("[", "");
-                        tag = tag.replace("]", "");
                         tag = tag.replace(" ", "");
-                        listTags.add(""+tag);
+                        listTags.add("academy-ucs-remy:article/"+tag.toLowerCase());
                     }
                 } catch (Exception e) {
                     LOG.info("\nRemyJobScheduledTask: ERROR while importing Related Articles CSV - Tags {} ", e.toString());
@@ -172,14 +171,14 @@ public class ServletRelatedArticlesImport extends SlingSafeMethodsServlet {
                 if (articleExist) {
                     if (articleUpdated) {
                         skipped++;
-                        out += "\n" + (j + 1) + ". Exist (skipped) : " + hashMapArticle.get("name");
+                        out += "\n>> " + (j + 1) + ". Exists (skipped) : " + hashMapArticle.get("name");
                     } else {
                         skipped++;
-                        out += "\n" + (j + 1) + ". Exist (skipped) : " + hashMapArticle.get("name");
+                        out += "\n>> " + (j + 1) + ". Exists (skipped) : " + hashMapArticle.get("name");
                     }
                 } else {
                     imported++;
-                    out += "\n" + (j + 1) + ". Imported : " + hashMapArticle.get("name");
+                    out += "\n>> " + (j + 1) + ". Imported : " + hashMapArticle.get("name");
                 }
 
                 nodeRelatedHashTags.setProperty("importProgress", (int) progress);
@@ -191,12 +190,12 @@ public class ServletRelatedArticlesImport extends SlingSafeMethodsServlet {
             }
         } catch (Exception e) {
             LOG.info("\nRemyJobScheduledTask: ERROR while importing Related Articles CSV {} ", e.toString());
-            out += "\nError: "+ e;
+            // out += "\nError: "+ e;
         }
         long time2 = new Date().getTime();
         long duration = (time2 - time1)/1000;
 
-        out = "\n==== ARTICLES IMPORT LOGS ====\n* IMPORTED: "+ imported +"\n* SKIPPED: "+ skipped +"\n* DURATION: "+ duration+" Sec "+"\n\n"+ out;
+        out = "\nIMPORT STATUS\n imported= "+ imported +"\n skipped= "+ skipped +"\nDuration: "+ duration+" Seconds "+"\n\n"+ out;
 
         return out;
     }
@@ -227,12 +226,13 @@ public class ServletRelatedArticlesImport extends SlingSafeMethodsServlet {
                         line = line.replace(",", ",");
                         String[] arrayArticle = line.split(",");
                         HashMap<String, String> hashMapArticle = new HashMap<>();
-                        hashMapArticle.put("name", ("" + arrayArticle[0]).toLowerCase().replace(" ", "-"));
+                        String name = !TextUtils.isEmpty(arrayArticle[1]) ? arrayArticle[1] : arrayArticle[0];
                         hashMapArticle.put("title", arrayArticle[0]);
-                        hashMapArticle.put("description", arrayArticle[1]);
-                        hashMapArticle.put("tags", arrayArticle[2]);
-                        hashMapArticle.put("date", arrayArticle[3]);
-                        hashMapArticle.put("image", arrayArticle[4]);
+                        hashMapArticle.put("name", ("" + name).replace(" ", "-"));
+                        hashMapArticle.put("description", arrayArticle[2]);
+                        hashMapArticle.put("tags", arrayArticle[3]);
+                        hashMapArticle.put("date", arrayArticle[4]);
+                        hashMapArticle.put("image", arrayArticle[5]);
                         listArticles.add(hashMapArticle);
                     }
 

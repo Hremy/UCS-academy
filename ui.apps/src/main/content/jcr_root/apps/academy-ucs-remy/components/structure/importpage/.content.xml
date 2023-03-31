@@ -3,18 +3,18 @@
     jcr:primaryType="cq:Page">
     <jcr:content
         jcr:primaryType="nt:unstructured"
-        jcr:title="UCS-Article Page Tools"
+        jcr:title="Import Page"
         sling:resourceType="granite/ui/components/shell/page"
-        consoleId="excel-upload">
+        consoleId="article-upload">
         <head jcr:primaryType="nt:unstructured">
             <clientlibs
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
-                categories="[granite.ui.coral.foundation,academy-ucs-remy.tools]"/>
+                categories="[granite.ui.coral.foundation,academy-ucs-remy.import]"/>
         </head>
         <title
             jcr:primaryType="nt:unstructured"
-            jcr:title="UCS-Article Page Tools"
+            jcr:title="Import Page"
             sling:resourceType="granite/ui/components/shell/title"/>
         <content
             jcr:primaryType="nt:unstructured"
@@ -78,45 +78,6 @@
                                                             sling:resourceType="granite/ui/components/coral/foundation/heading"
                                                             level="{Long}4"
                                                             text="No file chosen"/>
-                                                        <container
-                                                            jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
-                                                            margin="{Boolean}true">
-                                                            <items jcr:primaryType="nt:unstructured">
-                                                                <startFrom
-                                                                    granite:class="articlesStartFrom"
-                                                                    granite:id="articlesStartFrom"
-                                                                    jcr:primaryType="nt:unstructured"
-                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
-                                                                    emptyText="Start from?"
-                                                                    fieldLabel="Partial import START"
-                                                                    name="./articlesStartFrom"/>
-                                                                <endAt
-                                                                    granite:class="articlesEndAt"
-                                                                    granite:id="articlesEndAt"
-                                                                    jcr:primaryType="nt:unstructured"
-                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
-                                                                    emptyText="End At?"
-                                                                    fieldLabel="Partial import END"
-                                                                    name="./articlesEndAt"/>
-                                                                <onInsertError
-                                                                    granite:class="articlesContinueOnError"
-                                                                    granite:id="articlesContinueOnError"
-                                                                    jcr:primaryType="nt:unstructured"
-                                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                    name="./articlesContinueOnError"
-                                                                    text="Do not import empty rows?"
-                                                                    uncheckedValue="{Boolean}false"
-                                                                    value="{Boolean}true"/>
-                                                                <emptyRow
-                                                                    jcr:primaryType="nt:unstructured"
-                                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
-                                                                    name="./articlesSkipEmptyRow"
-                                                                    text="Do not abort on INSERT error?"
-                                                                    uncheckedValue="{Boolean}false"
-                                                                    value="{Boolean}true"/>
-                                                            </items>
-                                                        </container>
                                                         <submitButton
                                                             granite:id="btnSubmit"
                                                             jcr:primaryType="nt:unstructured"
@@ -128,6 +89,14 @@
                                                             sling:resourceType="granite/ui/components/coral/foundation/form/field"
                                                             fieldLabel=""
                                                             wrapperClass="loading loading--hide"/>
+                                                        <progressBar
+                                                                granite:class="coral-Heading coral-Heading--4 color--primary font--normal"
+                                                                granite:id="progressBar"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                                level="{Long}4"
+                                                                text=""
+                                                                wrapperClass="progressBar"/>
                                                         <resultMessage
                                                             granite:class="coral-Heading coral-Heading--4 color--primary font--normal"
                                                             granite:id="resultMessage"
@@ -135,14 +104,6 @@
                                                             sling:resourceType="granite/ui/components/coral/foundation/heading"
                                                             level="{Long}4"
                                                             text=""/>
-                                                        <progressBar
-                                                            granite:class="coral-Heading coral-Heading--4 color--primary font--normal"
-                                                            granite:id="progressBar"
-                                                            jcr:primaryType="nt:unstructured"
-                                                            sling:resourceType="granite/ui/components/coral/foundation/heading"
-                                                            level="{Long}4"
-                                                            text=""
-                                                            wrapperClass="progressBar"/>
                                                     </items>
                                                 </container>
                                             </items>

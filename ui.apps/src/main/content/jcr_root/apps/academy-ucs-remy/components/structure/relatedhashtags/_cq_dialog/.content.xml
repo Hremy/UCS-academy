@@ -331,30 +331,7 @@
                             sling:resourceType="granite/ui/components/foundation/container"
                             name="./relatedArticles">
                         <items jcr:primaryType="nt:unstructured">
-                            <csvFileArticle
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/foundation/form/fileupload"
-                                    allowUpload="{Boolean}false"
-                                    autoStart="{Boolean}false"
-                                    class="cq-droptarget"
-                                    fieldLabel="Upload CSV File"
-                                    fileNameParameter="./csvFileArticlePar"
-                                    fileReferenceParameter="./csvFileArticleRef"
-                                    mimeTypes="[csv, text/csv]"
-                                    multiple="{Boolean}false"
-                                    name="./csvFileArticle"
-                                    title="Article CSV"
-                                    uploadUrl="${suffix.path}"
-                                    useHTML5="{Boolean}true"/>
-                            <timefield
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="granite/ui/components/coral/foundation/form/timefield"
-                                    fieldLabel="Select Time"
-                                    name="./timeinterval"
-                                    valueFormat="HH:mm"
-                                    defaultValue="00:00"
-                                    emptyText="00:00">
-                            </timefield>
+
                         </items>
                     </container>
                 </items>

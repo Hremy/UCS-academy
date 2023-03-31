@@ -23,10 +23,10 @@ import java.io.IOException;
 
 @Component(service = {Servlet.class})
 @SlingServletResourceTypes(
-        resourceTypes="academy-ucs-remy/components/structure/articlepage",
-        methods= HttpConstants.METHOD_GET,
-        selectors="export",
-        extensions="json"
+        resourceTypes={"academy-ucs-remy/components/structure/articlepage", "cq:Page"},
+        methods= {HttpConstants.METHOD_GET},
+        selectors={"export"},
+        extensions={"json"}
 )
 @ServiceDescription("Related Articles Export")
 public class ServletRelatedArticlesExport extends SlingSafeMethodsServlet {
@@ -39,7 +39,10 @@ public class ServletRelatedArticlesExport extends SlingSafeMethodsServlet {
     Resource resource = request.getResource();
     ResourceResolver resourceResolver = resource.getResourceResolver();
 
-    Node nodeArticle = resourceResolver.getResource(resource.getPath().replace("/jcr:content", "")).adaptTo(Node.class);
+    String path = resource.getPath();
+    path = path.replace("/jcr:content", "");
+
+    Node nodeArticle = resourceResolver.getResource(path).adaptTo(Node.class);
 
     Article article = ServletRelatedArticles.getArticle(resource.getResourceResolver(), nodeArticle);
 

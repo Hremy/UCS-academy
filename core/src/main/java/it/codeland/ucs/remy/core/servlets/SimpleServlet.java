@@ -16,7 +16,7 @@ import java.io.IOException;
 
 @Component(service = { Servlet.class})
 @SlingServletResourceTypes(
-        resourceTypes="academy-ucs-remy/components/structure/articlepage",
+        resourceTypes="academy-ucs-remy/components/page",
         methods=HttpConstants.METHOD_GET,
         extensions="txt")
 @ServiceDescription("Simple Demo Servlet")

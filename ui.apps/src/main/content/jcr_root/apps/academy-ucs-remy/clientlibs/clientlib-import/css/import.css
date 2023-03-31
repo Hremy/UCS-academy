@@ -1,0 +1,45 @@
+.color--primary {
+    color: #404245;
+}
+
+.font--normal {
+    font-weight: normal;
+}
+
+.loading {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: auto;
+    background: url(../resources/loader.gif);
+    background-size: 100%;
+}
+
+.loading--show {
+    display: block !important;
+}
+
+.loading--hide {
+    display: none !important;
+}
+
+#resultMessage {
+  width: 100%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#progressBar {
+  width: 0%;
+  height: 30px;
+  background-color: #aa0404;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+  overflow: hidden;
+}

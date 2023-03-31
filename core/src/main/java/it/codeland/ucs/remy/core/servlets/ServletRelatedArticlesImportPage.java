@@ -42,26 +42,27 @@ public class ServletRelatedArticlesImportPage extends SlingAllMethodsServlet {
             int articlesStartFrom = 0;
             try {
                 articlesStartFrom = Integer.parseInt(String.valueOf(paramsIterator.next().getValue()[0]));
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             int articlesEndAt = 0;
             try {
                 articlesEndAt = Integer.parseInt(String.valueOf(paramsIterator.next().getValue()[0]));
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
 
-            boolean articlesContinueOnError = Boolean.parseBoolean(String.valueOf(paramsIterator.next().getValue()[0]));
-            boolean articlesSkipEmptyRow = Boolean.parseBoolean(String.valueOf(paramsIterator.next().getValue()[0]));
-            String articlesImportColumns = Arrays.toString(paramsIterator.next().getValue());
             if(articlesStartFrom < 0) articlesStartFrom = 0;
             if(articlesEndAt < 0) articlesEndAt = 0;
 
             out += ServletRelatedArticlesImport.importArticles(resource, resourceResolver, LOG, fileCSV, articlesStartFrom, articlesEndAt);
 
+            out = out.replace("#", "~");
+            out = out.replace(">>", "");
+
         }catch (Exception e) {
-            out += "\nError: "+ e;
+            LOG.error("Import Page Error", e);
+            // out += "\nError: "+ e;
         }
 
         out = out.replace("\n", "<br>");

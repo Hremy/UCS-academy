@@ -13,6 +13,7 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 
 @Model(adaptables = {Resource.class})
 public class OtherPage {
+
     @ValueMapValue(name = "sling:resourceType", injectionStrategy = InjectionStrategy.OPTIONAL)
     @Default(values = {"No resourceType"})
     protected String resourceType;

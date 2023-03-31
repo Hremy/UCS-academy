@@ -11,10 +11,16 @@ import java.util.Map;
 
 public class ResolverUtil {
 
-    public static ResourceResolver newResolver(ResourceResolverFactory resourceResolverFactory ) throws LoginException {
-        final Map<String, Object> paramMap = new HashMap<String, Object>();
-        paramMap.put( ResourceResolverFactory.SUBSERVICE, "remy-ucs" );
-        ResourceResolver resolver = resourceResolverFactory.getServiceResourceResolver(paramMap);
+    public static ResourceResolver newResolver(ResourceResolverFactory resourceResolverFactory ) {
+        ResourceResolver resolver = null;
+        try {
+            final Map<String, Object> paramMap = new HashMap<String, Object>();
+            paramMap.put( ResourceResolverFactory.SUBSERVICE, "remy-ucs-user" );
+            if (resourceResolverFactory != null) {
+                resolver = resourceResolverFactory.getServiceResourceResolver(paramMap);
+            }
+        } catch (LoginException ignore) {
+        }
         return resolver;
     }
 
